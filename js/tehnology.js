@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagesContainer = document.querySelector(".tehnology__images-set");
 
   // JSON
-  
   const imageSets = {
     "Мови програмування": [
       "./img/index/tehnology-logos/Language-programming/Technoligia.png",

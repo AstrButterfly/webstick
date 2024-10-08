@@ -4,6 +4,7 @@ let countryCallingCode = "";
 
 const iti = window.intlTelInput(phoneInput, {
   initialCountry: "auto",
+  //separateDialCode: true, // TODO: make better
   geoIpLookup: function(callback) {
     fetch('https://ipapi.co/json/')
     .then(function(response) { return response.json(); })
@@ -29,15 +30,6 @@ phoneInput.addEventListener('focus', function() {
   showCountryContainer();
 });
 
-document.querySelectorAll('input, button, textarea, select').forEach(element => {
-  element.addEventListener('focus', function() {
-      console.log('Element focused:', this);
-  });
-
-  element.addEventListener('blur', function() {
-      console.log('Element lost focus:', this);
-  });
-});
 
 phoneInput.addEventListener('blur', function() {
   const countryContainer = document.querySelector(".iti__country-container");
@@ -52,6 +44,8 @@ phoneInput.addEventListener('blur', function() {
 });
 
 function showCountryContainer() {
+  phoneInput.setAttribute("readonly", "true");
+
   setTimeout(function() {
     const countryContainer = document.querySelector(".iti__country-container");
 
@@ -62,5 +56,6 @@ function showCountryContainer() {
         phoneInput.value = countryCallingCode;
       }
     }
+    phoneInput.removeAttribute("readonly");
   }, 200);
 }

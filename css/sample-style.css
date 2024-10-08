@@ -25,6 +25,8 @@ body h1 {
   width: 100%;
   color: white;
   padding: 32px 0px;
+  -webkit-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
 }
 .header__wrapper {
   display: -webkit-box;
@@ -53,6 +55,7 @@ body h1 {
   gap: 24px;
 }
 .header__nav-item {
+  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,6 +69,16 @@ body h1 {
   font-size: 18px;
   font-style: normal;
   cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.header__nav-item img {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  transition: transform 0.5s ease, opacity 0.3s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .header__nav-item:hover {
   color: rgb(197, 197, 197);
@@ -73,9 +86,9 @@ body h1 {
   transition: all 0.3s;
 }
 .header__nav-item:hover img {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   opacity: 0.6;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .header__btn {
   position: relative;
@@ -137,6 +150,16 @@ body h1 {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }
+.header:hover {
+  background-color: #f8f9fa;
+}
+.header:hover__nav-item {
+  color: #212428;
+}
+.header:hover img {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
 
 .line {
   background-color: white;
@@ -159,8 +182,8 @@ body h1 {
   display: -ms-flexbox;
   display: flex;
   gap: 64px;
-  -webkit-animation: slide 15s linear infinite;
-          animation: slide 15s linear infinite;
+  -webkit-animation: slide 25s linear infinite;
+          animation: slide 25s linear infinite;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -547,7 +570,7 @@ body h1 {
   font-weight: 400;
   font-size: 24px;
   font-style: normal;
-  top: -15px;
+  top: -14px;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   -webkit-transition: color 0.4s ease, font-size 0.3s ease, -webkit-transform 0.4s ease;
