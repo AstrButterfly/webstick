@@ -1,0 +1,681 @@
+body {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+body h1 {
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  color: white;
+  padding: 32px 0px;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  cursor: pointer;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+.header__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  cursor: pointer;
+}
+.header__nav-item:hover {
+  color: rgb(197, 197, 197);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__nav-item:hover img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+.header__btn {
+  position: relative;
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  background-color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  overflow: hidden;
+  z-index: 2;
+  padding: 12px 16px 12px 24px;
+}
+.header__btn img {
+  z-index: 2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.header__btn span {
+  z-index: 2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.header__btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212428;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.header__btn:hover::before {
+  top: 0;
+}
+.header__btn:hover span {
+  color: white;
+}
+.header__btn:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.line {
+  background-color: white;
+  padding: 18px 0;
+  height: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.line .track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 64px;
+  -webkit-animation: slide 15s linear infinite;
+          animation: slide 15s linear infinite;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.line img {
+  height: 100%;
+}
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50.5%);
+            transform: translateX(-50.5%);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50.5%);
+            transform: translateX(-50.5%);
+  }
+}
+
+.pre-footer {
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+}
+.pre-footer__title {
+  width: 50%;
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 72px;
+  font-style: normal;
+  line-height: 82.73px;
+  max-width: 636px;
+}
+.pre-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 144px;
+}
+.pre-footer__contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  gap: 16px;
+  max-width: 636px;
+  margin: 0 auto;
+}
+.pre-footer__contact-form input {
+  padding-top: 2rem;
+  height: 56px;
+  font-size: 24px;
+}
+.pre-footer__form-group {
+  height: 72px;
+}
+.pre-footer__form-group label {
+  display: block;
+  color: #a8a8a8;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+}
+.pre-footer__checkbox-group {
+  position: relative;
+  margin: 24px 0px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 24px;
+}
+.pre-footer__checkbox-group label {
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+}
+.pre-footer__checkbox-group-real-checkbox {
+  display: none;
+}
+.pre-footer__checkbox-group-real-checkbox:checked ~ .pre-footer__checkbox-group__custom-checkbox {
+  background-color: #000000;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.pre-footer__checkbox-group-real-checkbox:checked:hover ~ .pre-footer__checkbox-group__custom-checkbox {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.pre-footer__checkbox-group__custom-checkbox {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: none;
+  border-radius: 4px;
+  border: 1px solid #212428;
+  position: relative;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  right: 8px;
+}
+.pre-footer__checkbox-group__custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background-image: url("../img/index/footer/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 1px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+.pre-footer__checkbox-group__custom-checkbox:hover {
+  opacity: 0.6;
+}
+.pre-footer__policy-link {
+  color: #999;
+}
+.pre-footer__policy-link:hover {
+  text-decoration: underline;
+}
+.pre-footer__policy-link .required {
+  color: red;
+}
+.pre-footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 144px;
+}
+.pre-footer__form__btn {
+  position: relative;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  border: 1px solid #212428;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  background-color: #212428;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  overflow: hidden;
+  z-index: 2;
+  line-height: 19.2px;
+  padding: 18.5px 24px 18.5px 32px;
+  width: 167px;
+}
+.pre-footer__form__btn img {
+  z-index: 2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.pre-footer__form__btn span {
+  z-index: 2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.pre-footer__form__btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.pre-footer__form__btn:hover::before {
+  top: 0;
+}
+.pre-footer__form__btn:hover span {
+  color: #212428;
+}
+.pre-footer__form__btn:hover img {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
+.pre-footer__red {
+  color: red;
+}
+
+.footer {
+  height: 242px;
+  padding: 72px 0px;
+  background-color: #212428;
+}
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__logo {
+  cursor: pointer;
+}
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.footer__wrapper-icon {
+  cursor: pointer;
+  height: 56px;
+  padding: 12px;
+  border-radius: 50%;
+  position: relative;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  border: 1px solid #212428;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  background-color: #212428;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #343a40;
+}
+.footer__wrapper-icon img {
+  z-index: 2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.footer__wrapper-icon span {
+  z-index: 2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.footer__wrapper-icon::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.footer__wrapper-icon:hover::before {
+  top: 0;
+}
+.footer__wrapper-icon:hover span {
+  color: #212428;
+}
+.footer__wrapper-icon:hover img {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
+.footer__wrapper-reviewed {
+  cursor: pointer;
+  background-color: white;
+  padding-top: 8.3px;
+  padding: 8.3px 5.1%;
+  width: 202px;
+  border-radius: 100px;
+}
+.footer__text {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+}
+.footer__other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+}
+.footer__other p {
+  opacity: 0.7;
+  font-size: 18px;
+}
+.footer__other-policy {
+  cursor: pointer;
+}
+
+.form-control {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  color: #212428;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+}
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #212428;
+  background-color: #f8f9fa;
+}
+
+.form-floating span {
+  color: red;
+}
+
+.form-floating label {
+  color: #a8a8a8;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+  top: -15px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: color 0.4s ease, font-size 0.3s ease, -webkit-transform 0.4s ease;
+  transition: color 0.4s ease, font-size 0.3s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, color 0.4s ease, font-size 0.3s ease;
+  transition: transform 0.4s ease, color 0.4s ease, font-size 0.3s ease, -webkit-transform 0.4s ease;
+  padding-left: 0.75rem;
+}
+
+.form-floating > label {
+  padding: 0px;
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext {
+  padding: 0px;
+}
+
+.form-floating:focus label {
+  opacity: 0;
+}
+
+.form-control:not(:-moz-placeholder-shown) + label {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:not(:-ms-input-placeholder) + label {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:not(:-moz-placeholder-shown) + .telephone {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:not(:-ms-input-placeholder) + .telephone {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:focus + .telephone,
+.form-control:not(:placeholder-shown) + .telephone {
+  top: -20px;
+  color: #000000;
+}
+
+.form-floating {
+  position: relative;
+  height: 72px;
+}
+.form-floating:hover label {
+  color: #212428;
+}
+.form-floating:hover input {
+  border-bottom: 1px solid #212428;
+}
+
+.iti {
+  width: 100%;
+}
+.iti__country-container {
+  display: none;
+  top: 20px;
+  height: 36px;
+  width: 44px;
+}
+.iti__selected-country-primary {
+  width: 100%;
+}
+.iti input {
+  padding-left: 3rem !important;
+  padding-top: 1rem;
+}
+.iti:hover label {
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+  color: #212428;
+}
+.iti:hover input {
+  -webkit-transition: border-bottom 0.4s ease;
+  transition: border-bottom 0.4s ease;
+  border-bottom: 1px solid #212428;
+}
+
+.focus {
+  -webkit-transition: color 0.3 ease, font-size 0.3s ease, -webkit-transform 0.3s ease !important;
+  transition: color 0.3 ease, font-size 0.3s ease, -webkit-transform 0.3s ease !important;
+  transition: transform 0.3s ease, color 0.3 ease, font-size 0.3s ease !important;
+  transition: transform 0.3s ease, color 0.3 ease, font-size 0.3s ease, -webkit-transform 0.3s ease !important;
+  -webkit-transform: translateY(-20px) !important;
+          transform: translateY(-20px) !important;
+  font-size: 20px !important;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 76px;
+  }
+  .pre-footer__title {
+    font-size: 63px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 516px) {
+  .container {
+    max-width: 486px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 355px;
+    margin: 0 auto;
+  }
+}

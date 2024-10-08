@@ -1,0 +1,411 @@
+@import "variables";
+@import "mixins";
+
+body {
+  @include font();
+  background: #f8f9fa;
+  overflow-x: hidden;
+
+  h1 {
+    @include font($mainColor, 500, 80px);
+  }
+}
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  color: white;
+  padding: 32px 0px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    cursor: pointer;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      @include font($font-size: 18px);
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(197, 197, 197);
+        transition: all 0.3s;
+        img {
+          transition: all 0.3s;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include button();
+    padding: 12px 16px 12px 24px;
+  }
+}
+
+.line {
+  background-color: white;
+  padding: 18px 0;
+  height: 115px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .track {
+    display: flex;
+    gap: 64px;
+    animation: slide 15s linear infinite;
+    width: max-content;
+  }
+
+  img {
+    height: 100%;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50.5%);
+    }
+  }
+}
+
+.pre-footer {
+  @include font($mainColor);
+  &__title {
+    width: 50%;
+    @include font($mainColor, 500, 72px);
+    line-height: 82.73px;
+    max-width: 636px;
+  }
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 144px;
+  }
+
+  &__contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 16px;
+    max-width: 636px;
+    margin: 0 auto;
+    
+    input {
+      padding-top: 2rem;
+      height: 56px;
+      font-size: 24px;
+    }
+  }
+  &__form-group {
+    height: 72px;
+    label {
+      display: block;
+      @include font(#a8a8a8, 400, 24px)
+    }
+  }
+  &__checkbox-group {
+    position: relative;
+    margin: 24px 0px;
+    left: 10px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 24px;
+
+    label {
+      @include font($mainColor, 400, 16px);
+    }
+
+    &-real-checkbox {
+      display: none;
+    }
+
+    &-real-checkbox:checked ~ &__custom-checkbox {
+      background-color: #000000;
+      transition: 0.2s all;
+    }
+
+    &-real-checkbox:checked:hover ~ &__custom-checkbox {
+      opacity: 0.6;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &__custom-checkbox {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: none;
+      border-radius: 4px;
+      border: 1px solid $mainColor;
+      position: relative;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      right: 8px;
+
+      &::before {
+        content: "";
+
+        display: inline-block;
+        width: 15px;
+        height: 10px;
+        background-image: url("../img/index/footer/check.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 1px;
+
+        transition: 0.2s ease-in;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__policy-link {
+    color: #999;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .required {
+      color: red;
+    }
+  }
+
+  &__form {
+    &__btn {
+      @include button(white, $mainColor, 500, 16px);
+      line-height: 19.2px;
+      padding: 18.5px 24px 18.5px 32px;
+      width: 167px;
+    }
+    display: flex;
+    gap: 24px;
+    margin-bottom: 144px;
+  }
+  &__red {
+    color: red;
+  }
+}
+
+.footer {
+  height: 242px;
+  padding: 72px 0px;
+  background-color: $mainColor;
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+
+    &-icon {
+      cursor: pointer;
+      height: 56px;
+      padding: 12px;
+      border-radius: 50%;
+      @include button(white, $mainColor);
+      background-color: #343a40;
+    }
+    &-reviewed {
+      cursor: pointer;
+      background-color: white;
+      padding-top: 8.3px;
+      padding: 8.3px 5.1%;
+      width: 202px;
+      border-radius: 100px;
+    }
+  }
+  &__text {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    @include font(white, 400, 16px);
+  }
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    p {
+      opacity: 0.7;
+      font-size: 18px;
+    }
+
+    &-policy {
+      cursor: pointer;
+    }
+  }
+}
+
+.form-control {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  @include font($mainColor, 400, 24px);
+
+
+  &:focus {
+    box-shadow: none;
+    border-bottom: 1px solid $mainColor;
+    background-color: #f8f9fa;}
+}
+
+.form-floating span {
+  color: red;
+}
+
+.form-floating label {
+  @include font(#a8a8a8, 400, 24px);
+  top: -15px;
+  transform: translateY(50%);
+  transition: transform 0.4s ease, color 0.4s ease, font-size 0.3s ease;
+  padding-left: 0.75rem;
+}
+
+.form-floating>label {
+  padding: 0px;
+}
+.form-floating>.form-control, .form-floating>.form-control-plaintext {
+  padding: 0px;
+}
+
+.form-floating:focus label {
+  opacity: 0;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  top: -20px;
+  color: #000000;
+}
+
+.form-control:focus + .telephone,
+.form-control:not(:placeholder-shown) + .telephone {
+  top: -20px;
+  color: #000000;
+}
+
+
+.form-floating {
+  position: relative;
+  height: 72px;
+
+  &:hover label{
+    color: $mainColor;
+  }
+  &:hover input{
+    border-bottom: 1px solid $mainColor;
+  }
+
+}
+
+.iti {
+  width: 100%;
+
+  &__country-container {
+    display: none;
+    top: 20px;
+    height: 36px;
+    width: 44px;
+  }
+  &__selected-country-primary {
+    width: 100%;
+  }
+  input {
+    padding-left: 3rem !important; 
+    padding-top: 1rem;
+  }
+  &:hover label{
+    transition: color 0.4s ease;
+    color: $mainColor;
+  }
+  &:hover input{
+    transition: border-bottom 0.4s ease;
+    border-bottom: 1px solid $mainColor;
+  }
+}
+
+.focus {
+  transition: transform 0.3s ease, color 0.3 ease, font-size 0.3s ease !important;
+  transform: translateY(-20px) !important;
+  font-size: 20px !important;
+}
+
+// 1
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 76px;
+  }
+
+  .pre-footer {
+    &__title {
+      font-size: 63px;
+    }
+  }
+}
+
+// 2
+@media (max-width: 1000px) {
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+}
+
+// 3
+@media (max-width: 516px) {
+  .container {
+    max-width: 486px;
+    margin: 0 auto;
+  }
+}
+
+// 4
+@media (max-width: 375px) {
+  .container {
+    max-width: 355px;
+    margin: 0 auto;
+  }
+}
