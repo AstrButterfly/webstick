@@ -1,5 +1,7 @@
 .intro {
   background-image: url(../img/index/main-screen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   color: white;
 }
