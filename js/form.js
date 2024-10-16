@@ -1,72 +1,56 @@
-const phoneInput = document.querySelector("#phone");
-const label = document.querySelector(".telephone");
+const phoneInputs = document.querySelectorAll('input[type="tel"]');
+const labels = document.querySelectorAll('.telephone');
 
-const iti = window.intlTelInput(phoneInput, {
-  initialCountry: "auto",
-  separateDialCode: true,
-  i18n: {
-    searchPlaceholder: "Знайти за номером, або назвою",
-  },
-  geoIpLookup: function(callback) {
-    fetch('https://ipapi.co/json/')
-    .then(function(response) { return response.json(); })
-    .then(data => callback(data.country_code))
-    .catch(() => callback('us'));
-  },
-  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-});
+if (typeof window.intlTelInput != 'undefined') {
+  phoneInputs.forEach((phoneInput, index) => {
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "auto",
+      separateDialCode: true,
+      i18n: {
+        searchPlaceholder: "Знайти за номером, або назвою",
+      },
+      geoIpLookup: function(callback) {
+        fetch('https://ipapi.co/json/')
+          .then(response => response.json())
+          .then(data => callback(data.country_code))
+          .catch(() => callback('us'));
+      },
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    phoneInput.addEventListener('countrychange', function () {
+      const countryCallingCode = iti.getSelectedCountryData().dialCode;
+      phoneInput.style.paddingLeft = `${79 + (countryCallingCode.length - 1) * 14}px`;
+    });
+
+    phoneInput.addEventListener('focus', function () {
+      const label = labels[index];
+      label.classList.add("focus");
+      showCountryContainer(phoneInput);
+    });
+  });
+}
 
 document.addEventListener('click', (e) => {
-  const countryContainer = document.querySelector(".iti__country-container");
+  const countryContainers = document.querySelectorAll(".iti__country-container");
 
-  const phoneHasData = phoneInput.value.trim() !== "";
-
-  if (!e.target.closest('.iti') && !e.target.closest('#phone') && !phoneHasData) {
-    countryContainer.style.display = "none";
-    console.log('Removed by click');
-    label.classList.remove("focus");
-  }
+  phoneInputs.forEach((phoneInput, index) => {
+    if (!e.target.closest('.iti') && !e.target.closest(`input[type="tel"]#${phoneInput.id}`) && !phoneInput.value.trim()) {
+      const countryContainer = countryContainers[index];
+      if (countryContainer) {
+        countryContainer.style.display = "none";
+        labels[index].classList.remove("focus");
+      }
+    }
+  });
 }, true);
 
 
-phoneInput.addEventListener('countrychange', function() {
-  countryCallingCode = iti.getSelectedCountryData().dialCode;
-  //console.log("Country code:", countryCallingCode);
-
-  if (countryCallingCode.length === 1) {
-    phoneInput.style.paddingLeft = "79px";
-  } else if (countryCallingCode.length === 2) {
-    phoneInput.style.paddingLeft = "93px";
-  } else if (countryCallingCode.length === 3) {
-    phoneInput.style.paddingLeft = "106px";
-  }
-});
-
-phoneInput.addEventListener('focus', function() {
-  label.classList.add("focus");
-  showCountryContainer();
-});
-
-// phoneInput.addEventListener('blur', function() {
-//   const countryContainer = document.querySelector(".iti__country-container");
-//   const ifNotEmpty = countryCallingCode + phoneInput.value;
-//   // console.log(countryCallingCode);
-//   // console.log(phoneInput.value);
-//   // console.log(ifNotEmpty);
-//   if (ifNotEmpty === countryCallingCode) {
-//     if (countryContainer) {
-//       countryContainer.style.display = "none";
-//       phoneInput.value = "";
-//     }
-//     label.classList.remove("focus");
-//   }
-// });
-
-function showCountryContainer() {
+function showCountryContainer(phoneInput) {
   phoneInput.setAttribute("readonly", "true");
 
-  setTimeout(function() {
-    const countryContainer = document.querySelector(".iti__country-container");
+  setTimeout(function () {
+    const countryContainer = phoneInput.closest('.iti').querySelector(".iti__country-container");
 
     if (countryContainer) {
       countryContainer.style.display = "block";
@@ -75,6 +59,7 @@ function showCountryContainer() {
   }, 100);
   console.log('Showed');
 }
+
 
 
 

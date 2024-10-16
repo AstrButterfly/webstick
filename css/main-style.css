@@ -1,26 +1,19 @@
 .intro {
   background-image: url(../img/index/main-screen.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   color: white;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
 }
 .intro__wrapper {
   padding-top: 28%;
 }
 .intro__title {
-  color: white;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
   font-size: 105px;
-  font-style: normal;
 }
 .intro__subtitle {
-  color: white;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  font-style: normal;
   max-width: 639px;
   line-height: 36px;
 }
@@ -41,10 +34,6 @@
   border: 1px solid white;
   background-color: white;
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  font-style: normal;
   height: 196px;
   width: 196px;
   border-radius: 50%;
@@ -98,10 +87,8 @@
 .internet-shop h1,
 .redesign h1 {
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 36px;
-  font-style: normal;
   white-space: nowrap;
 }
 .lending p,
@@ -109,10 +96,8 @@
 .internet-shop p,
 .redesign p {
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  font-style: normal;
   line-height: 24px;
 }
 .lending img,
@@ -190,10 +175,8 @@
           box-shadow: 0px 7px 9.5px 0px rgba(0, 0, 0, 0.1019607843);
   background-color: rgb(255, 255, 255);
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 24px;
-  font-style: normal;
   height: 56px;
   top: 6%;
   max-width: 119px;
@@ -534,10 +517,8 @@
 .tehnology li {
   padding: 8px 16px;
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 24px;
-  font-style: normal;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   white-space: nowrap;
@@ -583,10 +564,8 @@
 .cases__btn {
   position: relative;
   color: white;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  font-style: normal;
   border: 1px solid #212428;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,8 +580,8 @@
   background-color: #212428;
   border-radius: 100px;
   cursor: pointer;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
   padding: 12px 24px 12px 32px;
@@ -638,8 +617,8 @@
   color: #212428;
 }
 .cases__btn:hover img {
-  -webkit-filter: brightness(1) invert(1);
-          filter: brightness(1) invert(1);
+  -webkit-filter: brightness(4) invert(1);
+          filter: brightness(4) invert(1);
 }
 .cases__item {
   padding: 32px 0px;
@@ -700,10 +679,8 @@
   padding: 4px 12px;
   position: relative;
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  font-style: normal;
   border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,8 +695,8 @@
   background-color: white;
   border-radius: 100px;
   cursor: pointer;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
   border: 1px solid #212428;
@@ -773,18 +750,14 @@
 }
 .cases h2 {
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 36px;
-  font-style: normal;
   line-height: 46.8px;
 }
 .cases p {
   color: #212428;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  font-style: normal;
   line-height: 24px;
 }
 

@@ -39,7 +39,7 @@ function scrollImage(image) {
 
     const scrollStep = () => {
       const remainingScroll = imageHeight - containerHeight - currentScroll;
-      const scrollSpeed = Math.max(remainingScroll / 500, 1);
+      const scrollSpeed = Math.max(remainingScroll / 200, 1);
 
       if (currentScroll < imageHeight - containerHeight) {
         currentScroll += scrollSpeed;

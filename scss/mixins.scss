@@ -2,10 +2,8 @@
 
 @mixin font($color: #ffffff, $fontW: 400, $font-size: 14px) {
   color: $color;
-  font-family: "Ubuntu", sans-serif;
   font-weight: $fontW;
   font-size: $font-size;
-  font-style: normal;
 }
 
 @mixin button(
@@ -24,7 +22,7 @@
   background-color: $background;
   border-radius: 100px;
   cursor: pointer;
-  transition: color 1s ease;
+  transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
 
@@ -65,7 +63,7 @@
       }
     } @else if $background == $mainColor {
       img {
-        filter: brightness(1) invert(1);
+        filter: brightness(4) invert(1);
       }
     }
   }
