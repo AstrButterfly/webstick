@@ -1,19 +1,46 @@
 .intro {
-  background-image: url(../img/index/main-screen.jpg);
-  background-size: cover;
-  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  z-index: 0;
   color: white;
   color: white;
   font-weight: bold;
   font-size: 24px;
 }
-.intro__wrapper {
-  padding-top: 28%;
+.intro__banner-img {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url(../img/index/background-image.png);
+}
+.intro__banner-fade {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(26.01%, rgba(33, 37, 41, 0.83)), color-stop(95.4%, rgba(33, 37, 41, 0.56)));
+  background: linear-gradient(90deg, rgba(33, 37, 41, 0.83) 26.01%, rgba(33, 37, 41, 0.56) 95.4%);
 }
 .intro__title {
   font-size: 105px;
 }
 .intro__subtitle {
+  font-weight: 400;
   max-width: 639px;
   line-height: 36px;
 }
@@ -52,10 +79,8 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
-  -webkit-transition: background-color 0.6s ease, color 0.6s ease, -webkit-transform 0.6s ease;
-  transition: background-color 0.6s ease, color 0.6s ease, -webkit-transform 0.6s ease;
-  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
-  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
   line-height: 28px;
 }
 .intro__btn img {
@@ -68,8 +93,10 @@
 .intro__btn:hover {
   background-color: transparent;
   color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 .intro__btn:hover img {
   -webkit-filter: brightness(0) invert(1);

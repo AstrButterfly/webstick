@@ -96,7 +96,7 @@ body a:hover:after {
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1326px;
   margin: 0 auto;
 }
 
@@ -105,6 +105,7 @@ body a:hover:after {
   width: 100%;
   color: white;
   padding: 32px 0px;
+  z-index: 1;
 }
 .header.sticky {
   position: fixed;
@@ -197,7 +198,6 @@ body a:hover:after {
 }
 .header__nav-item {
   padding: 0px 12px;
-  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,8 +207,8 @@ body a:hover:after {
   gap: 4px;
   font-size: 18px;
   cursor: pointer;
-  -webkit-transition: padding-bottom 0.3s, color 0.3s ease;
-  transition: padding-bottom 0.3s, color 0.3s ease;
+  -webkit-transition: padding-bottom 0.5s, color 0.3s ease;
+  transition: padding-bottom 0.5s, color 0.3s ease;
 }
 .header__nav-item img {
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.5s ease;
@@ -225,7 +225,7 @@ body a:hover:after {
   opacity: 0.6;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  padding-bottom: 5%;
+  padding-bottom: 4%;
 }
 .header__btn {
   position: relative;
@@ -250,7 +250,7 @@ body a:hover:after {
   transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
-  padding: 12px 16px 12px 24px;
+  padding: 11px 16px 11px 24px;
   margin-left: 1.5rem;
 }
 .header__btn img {
@@ -307,7 +307,7 @@ body a:hover:after {
 .services-dropdown {
   position: absolute;
   left: 15%;
-  top: 65%;
+  top: 69%;
   width: 70%;
   padding-top: 2rem;
   cursor: auto;
@@ -399,7 +399,7 @@ body a:hover:after {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 .line .track {
@@ -407,11 +407,12 @@ body a:hover:after {
   display: -ms-flexbox;
   display: flex;
   gap: 64px;
-  -webkit-animation: slide 30s linear infinite;
-          animation: slide 30s linear infinite;
+  -webkit-animation: slide 50s linear infinite;
+          animation: slide 50s linear infinite;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: 100%;
 }
 .line img {
   height: 100%;
@@ -438,8 +439,10 @@ body a:hover:after {
 }
 
 .pre-footer__title {
-  width: 50%;
+  color: #212428;
+  font-weight: 500;
   font-size: 72px;
+  width: 50%;
   line-height: 82.73px;
   max-width: 636px;
 }
@@ -462,7 +465,7 @@ body a:hover:after {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  gap: 16px;
+  gap: 8px;
   max-width: 636px;
   margin: 0 auto;
 }
