@@ -10,7 +10,7 @@
   min-height: 100vh;
   z-index: 0;
   color: white;
-  @include font(white, bold, 24px);
+  @include font(white, 700, 24px);
 
   &__wrapper {
     max-height: 301px;
@@ -335,7 +335,7 @@
     display: flex;
   }
   li {
-    @include font($mainColor, 500, 24px);
+    @include font($mainColor, 500, 20px);
     transition: all 0.1s;
     white-space: nowrap;
     border-bottom: 1px solid $mainColor;
@@ -465,6 +465,9 @@
     &__title {
       font-size: 60px;
     }
+    &__wrapper {
+      padding: 0px 7px;
+    }
   }
   .lending,
   .corporation,
@@ -478,22 +481,27 @@
     }
   }
   .tehnology {
+    margin: 0 7px;
     li {
       padding: 8px;
     }
   }
   .cases {
-    margin: 145px 0px;
+    margin: 90px 7px;
     &__tittle-btn h1 {
       font-size: 40px;
     }
   }
 }
 
+// 1200 - 1400
 @media (min-width: 1200px) {
   .intro {
     &__title {
       font-size: 60px;
+    }
+    &__wrapper {
+      padding: 0px 17px;
     }
   }
   .lending,
@@ -505,12 +513,15 @@
     }
   }
   .tehnology {
+    margin: 0 17px;
     li {
       padding: 8px;
     }
   }
+
   .cases {
-    margin: 145px 0px;
+    margin: 145px 17px;
+
     &__tittle-btn h1 {
       font-size: 40px;
     }
@@ -518,11 +529,13 @@
 }
 
 // 1400+
-
 @media (min-width: 1400px) {
   .intro {
     &__title {
       font-size: 80px;
+    }
+    &__wrapper {
+      padding: 0;
     }
   }
   .lending,

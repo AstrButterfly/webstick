@@ -586,10 +586,10 @@ body a:hover:after {
   transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
-  line-height: 19.2px;
-  padding: 18.5px 24px 18.5px 32px;
+  line-height: 19px;
+  padding: 15px 24px 15px 32px;
   width: 167px;
-  z-index: 1 !important;
+  z-index: 1;
 }
 .pre-footer__form__btn img {
   z-index: 2;
@@ -974,19 +974,55 @@ body a:hover:after {
   .sticky .container {
     padding: 0;
   }
+  .pre-footer {
+    margin: 0 7px;
+  }
   .pre-footer__title {
     font-size: 32px;
+    line-height: 36px;
+  }
+  .header__wrapper {
+    padding: 0px 7px;
+  }
+  .footer__all {
+    padding: 0px 7px;
   }
 }
 @media (min-width: 1200px) {
-  .sticky .container {
-    padding: 0;
-  }
   .container {
     max-width: 1296px;
     padding: 0px 25px;
   }
+  .pre-footer {
+    margin: 0 17px;
+  }
+  .pre-footer__title {
+    font-size: 63px;
+    line-height: normal;
+  }
+  .header__wrapper {
+    padding: 0px 17px;
+  }
+  .footer__all {
+    padding: 0px 17px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1326px;
+    padding: 0px 25px;
+  }
   .pre-footer__title {
     font-size: 72px;
+    line-height: normal;
+  }
+  .header__wrapper {
+    padding: 0;
+  }
+  .footer__all {
+    padding: 0px 17px;
+  }
+  .footer .container {
+    padding: 0;
   }
 }

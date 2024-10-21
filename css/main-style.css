@@ -12,7 +12,7 @@
   z-index: 0;
   color: white;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
 }
 .intro__wrapper {
@@ -575,7 +575,7 @@
 .tehnology li {
   color: #212428;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   white-space: nowrap;
@@ -879,6 +879,9 @@
   .intro__title {
     font-size: 60px;
   }
+  .intro__wrapper {
+    padding: 0px 7px;
+  }
   .lending h2,
   .corporation h2,
   .internet-shop h2,
@@ -891,11 +894,14 @@
   .redesign__photo {
     margin: 72px 0px;
   }
+  .tehnology {
+    margin: 0 7px;
+  }
   .tehnology li {
     padding: 8px;
   }
   .cases {
-    margin: 145px 0px;
+    margin: 90px 7px;
   }
   .cases__tittle-btn h1 {
     font-size: 40px;
@@ -905,17 +911,23 @@
   .intro__title {
     font-size: 60px;
   }
+  .intro__wrapper {
+    padding: 0px 17px;
+  }
   .lending__photo,
   .corporation__photo,
   .internet-shop__photo,
   .redesign__photo {
     margin: 72px 0px;
   }
+  .tehnology {
+    margin: 0 17px;
+  }
   .tehnology li {
     padding: 8px;
   }
   .cases {
-    margin: 145px 0px;
+    margin: 145px 17px;
   }
   .cases__tittle-btn h1 {
     font-size: 40px;
@@ -924,6 +936,9 @@
 @media (min-width: 1400px) {
   .intro__title {
     font-size: 80px;
+  }
+  .intro__wrapper {
+    padding: 0;
   }
   .lending__photo,
   .corporation__photo,

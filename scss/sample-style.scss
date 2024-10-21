@@ -382,10 +382,10 @@ body {
   &__form {
     &__btn {
       @include button($mainBgColor, $mainColor, 500, 16px);
-      line-height: 19.2px;
-      padding: 18.5px 24px 18.5px 32px;
+      line-height: 19px;
+      padding: 15px 24px 15px 32px;
       width: 167px;
-      z-index: 1 !important;
+      z-index: 1;
     }
     display: flex;
     gap: 24px;
@@ -618,8 +618,7 @@ body {
   backdrop-filter: blur(5px);
 }
 
-// 516 - 375
-
+// 375-516
 @media (min-width: 375px) {
   .pre-footer {
     &__title {
@@ -628,7 +627,7 @@ body {
   }
 }
 
-// 1000 - 516
+// 516-1000
 @media (min-width: 516px) {
   .container {
     max-width: 486px;
@@ -642,7 +641,7 @@ body {
   }
 }
 
-// 1200-1000
+// 1000-1200
 @media (min-width: 1000px) {
   .container {
     max-width: 1150px;
@@ -656,25 +655,74 @@ body {
   }
 
   .pre-footer {
+    margin: 0 7px;
     &__title {
       font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  .header {
+    &__wrapper {
+      padding: 0px 7px;
+    }
+  }
+  .footer {
+    &__all {
+      padding: 0px 7px;
     }
   }
 }
-// 1200+
+// 1200-1400
 @media (min-width: 1200px) {
-  .sticky {
-    .container {
-      padding: 0;
-    }
-  }
   .container {
     max-width: 1296px;
     padding: 0px 25px;
   }
+
+  .pre-footer {
+    margin: 0 17px;
+    &__title {
+      font-size: 63px;
+      line-height: normal;
+    }
+  }
+  .header {
+    &__wrapper {
+      padding: 0px 17px;
+    }
+  }
+  .footer {
+    &__all {
+      padding: 0px 17px;
+    }
+  }
+}
+
+// 1400+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1326px;
+    padding: 0px 25px;
+  }
+
   .pre-footer {
     &__title {
       font-size: 72px;
+      line-height: normal;
+    }
+  }
+  .header {
+    &__wrapper {
+      padding: 0;
+    }
+  }
+  .footer {
+    &__all {
+      padding: 0px 17px;
+    }
+    .container {
+      padding: 0;
     }
   }
 }
