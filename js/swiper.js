@@ -1,96 +1,52 @@
-const images = document.querySelectorAll(".swiper-slide img");
-let isScrolling = false;
-let atBottom = false;
-let currentImage = null;
+document.addEventListener("DOMContentLoaded", function () {
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    dragToClose: false,
 
-function preventScroll(event) {
-  event.preventDefault();
-  event.stopPropagation();
-  return false;
-}
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
 
-images.forEach((image) => {
-  image.addEventListener("click", () => scrollImage(image));
-});
+    Images: {
+      zoom: false,
+    },
 
-function scrollImage(image) {
-  if (isScrolling) {
-    if (image === currentImage) {
-      return;
-    } else {
-      currentImage.style.transform = "translateY(0)";
-      currentImage.style.transition = "none";
-      resetScrollState();
-    }
-  }
+    Thumbs: {
+      type: "classic",
+    },
 
-  currentImage = image;
-  const swiperContainer = image.closest(".swiper");
-  const containerHeight = swiperContainer.offsetHeight;
-  const imageHeight = image.offsetHeight;
+    Carousel: {
+      transition: false,
+      friction: 0,
+      hideScrollbar: false,
+    },
 
-  if (imageHeight <= containerHeight) return;
-
-  if (!atBottom) {
-    isScrolling = true;
-    let currentScroll = 0;
-
-    window.addEventListener("wheel", preventScroll, { passive: false });
-
-    const scrollStep = () => {
-      const remainingScroll = imageHeight - containerHeight - currentScroll;
-      const scrollSpeed = Math.max(remainingScroll / 200, 1);
-
-      if (currentScroll < imageHeight - containerHeight) {
-        currentScroll += scrollSpeed;
-        image.style.transform = `translateY(-${currentScroll}px)`;
-        requestAnimationFrame(scrollStep);
-      } else {
-        currentScroll = imageHeight - containerHeight;
-        image.style.transform = `translateY(-${currentScroll}px)`;
-        atBottom = true;
-        isScrolling = false;
-
-        window.removeEventListener("wheel", preventScroll);
-      }
-    };
-
-    scrollStep();
-  } else {
-    isScrolling = true;
-    image.style.transition = "transform 1s ease";
-    image.style.transform = "translateY(0)";
-
-    window.addEventListener("wheel", preventScroll, { passive: false });
-
-    setTimeout(() => {
-      image.style.transition = "";
-      atBottom = false;
-      isScrolling = false;
-
-      window.removeEventListener("wheel", preventScroll);
-    }, 1000);
-  }
-}
-
-function resetScrollState() {
-  atBottom = false;
-  isScrolling = false;
-  window.removeEventListener("wheel", preventScroll);
-}
-
-document
-  .querySelectorAll(
-    ".lending__zoom, .corporation__zoom, .internet-shop__zoom, .redesign__zoom"
-  )
-  .forEach((zoomButton) => {
-    zoomButton.addEventListener("click", () => {
-      const swiperContainer = zoomButton.closest(".lending__wrapper"); // Ищем контейнер слайдера
-      const activeSlide = swiperContainer.querySelector(
-        ".swiper-slide-active img"
-      ); // Находим активный слайд
-      if (activeSlide) {
-        scrollImage(activeSlide);
-      }
-    });
+    on: {
+      "Carousel.ready Carousel.change": (fancybox) => {
+        fancybox.container.style.setProperty(
+          "--bg-image",
+          `url("${fancybox.getSlide().thumbSrc}")`
+        );
+      },
+    },
   });
+  document
+    .querySelector(".lending__zoom")
+    .addEventListener("click", function () {
+      Fancybox.show([
+        {
+          src: "./img/index/slider-photos/slide-2.png",
+          thumb: "./img/index/slider-photos/slide-2.png",
+          caption: "Image 1",
+        },
+        {
+          src: "./img/index/slider-photos/home-2.png",
+          thumb: "./img/index/slider-photos/home-2.png",
+          caption: "Image 2",
+        },
+      ]);
+    });
+});

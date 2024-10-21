@@ -15,6 +15,11 @@
   font-weight: bold;
   font-size: 24px;
 }
+.intro__wrapper {
+  max-height: 301px;
+  height: 100%;
+  min-height: 256px;
+}
 .intro__banner-img {
   position: absolute;
   top: 0px;
@@ -25,6 +30,7 @@
   background-repeat: no-repeat;
   z-index: -1;
   background-image: url(../img/index/background-image.png);
+  background-position: 10%;
 }
 .intro__banner-fade {
   position: absolute;
@@ -35,9 +41,6 @@
   z-index: -1;
   background: -webkit-gradient(linear, left top, right top, color-stop(26.01%, rgba(33, 37, 41, 0.83)), color-stop(95.4%, rgba(33, 37, 41, 0.56)));
   background: linear-gradient(90deg, rgba(33, 37, 41, 0.83) 26.01%, rgba(33, 37, 41, 0.56) 95.4%);
-}
-.intro__title {
-  font-size: 105px;
 }
 .intro__subtitle {
   font-weight: 400;
@@ -103,6 +106,11 @@
           filter: brightness(0) invert(1);
 }
 
+.fancybox__bg {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
 .lending,
 .corporation,
 .internet-shop,
@@ -113,10 +121,15 @@
 .corporation h1,
 .internet-shop h1,
 .redesign h1 {
+  white-space: nowrap;
+}
+.lending h2,
+.corporation h2,
+.internet-shop h2,
+.redesign h2 {
   color: #212428;
   font-weight: 500;
-  font-size: 36px;
-  white-space: nowrap;
+  font-size: 26px;
 }
 .lending p,
 .corporation p,
@@ -131,13 +144,13 @@
 .corporation img,
 .internet-shop img,
 .redesign img {
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 .lending__photo,
 .corporation__photo,
 .internet-shop__photo,
 .redesign__photo {
-  margin: 144px 0px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,8 +200,9 @@
 .internet-shop .swiper,
 .redesign .swiper {
   cursor: pointer;
-  height: 674px;
-  overflow-y: scroll;
+  max-height: 674px;
+  width: 100%;
+  overflow-y: hidden;
   -webkit-box-shadow: 0px 0px 0px 2px #000000;
           box-shadow: 0px 0px 0px 2px #000000;
   border-radius: 30px;
@@ -218,6 +232,14 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 6px;
+  z-index: 1;
+}
+.lending .swiper img,
+.corporation .swiper img,
+.internet-shop .swiper img,
+.redesign .swiper img {
+  width: 100%;
+  height: 100%;
 }
 .lending__block,
 .corporation__block,
@@ -226,7 +248,7 @@
   position: absolute;
   bottom: 32px;
   right: 90px;
-  width: 190px;
+  width: 200px;
   border-radius: 50px;
   padding: 25px 0px;
   display: -webkit-box;
@@ -237,12 +259,13 @@
 .corporation__zoom,
 .internet-shop__zoom,
 .redesign__zoom {
-  padding: 16px;
+  padding: 15px;
   position: absolute;
   bottom: 24px;
   right: 30px;
   width: 56px;
   height: 56px;
+  border: 1px solid white;
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
@@ -259,6 +282,12 @@
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+}
+.lending__zoom a::after,
+.corporation__zoom a::after,
+.internet-shop__zoom a::after,
+.redesign__zoom a::after {
+  content: none;
 }
 .lending__zoom::before,
 .corporation__zoom::before,
@@ -321,11 +350,13 @@
 .redesign .swiper-button-next__3,
 .redesign .swiper-button-next__4 {
   border-radius: 50px;
+  border: 1px solid white;
   background-color: white;
-  padding: 16px;
+  padding: 15px;
   width: 56px;
   height: 56px;
   overflow: hidden;
+  z-index: 2;
 }
 .lending .swiper-button-prev__1::after, .lending .swiper-button-prev__2::after, .lending .swiper-button-prev__3::after, .lending .swiper-button-prev__4::after,
 .lending .swiper-button-next__1::after,
@@ -542,7 +573,6 @@
   display: flex;
 }
 .tehnology li {
-  padding: 8px 16px;
   color: #212428;
   font-weight: 500;
   font-size: 24px;
@@ -573,10 +603,7 @@
           flex-grow: 1;
 }
 
-.cases {
-  margin: 98px 0px;
-}
-.cases__tittle-btn {
+.cases__tittle {
   margin-bottom: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,6 +616,7 @@
           align-items: center;
 }
 .cases__btn {
+  margin-top: 32px;
   position: relative;
   color: white;
   font-weight: 500;
@@ -611,18 +639,18 @@
   transition: color 0.1s ease;
   overflow: hidden;
   z-index: 2;
-  padding: 12px 24px 12px 32px;
+  padding: 15px 24px 15px 32px;
   width: 202px;
 }
 .cases__btn img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .cases__btn span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .cases__btn::before {
   content: "";
@@ -633,8 +661,8 @@
   height: 100%;
   background-color: white;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .cases__btn:hover::before {
@@ -646,6 +674,65 @@
 .cases__btn:hover img {
   -webkit-filter: brightness(4) invert(1);
           filter: brightness(4) invert(1);
+}
+.cases__btn__main {
+  margin: 32px auto;
+  width: 420px;
+  position: relative;
+  color: #212428;
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid #212428;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+  overflow: hidden;
+  z-index: 2;
+}
+.cases__btn__main img {
+  z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.cases__btn__main span {
+  z-index: 2;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.cases__btn__main::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212428;
+  border-radius: 50px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+.cases__btn__main:hover::before {
+  top: 0;
+}
+.cases__btn__main:hover span {
+  color: #f8f9fa;
+}
+.cases__btn__main:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 .cases__item {
   padding: 32px 0px;
@@ -689,7 +776,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.cases__wrapper:last-child {
+.cases__last-wrapper {
   border-bottom: 1px solid #b5b5b5;
 }
 .cases .cases__btns + .cases__btns {
@@ -708,7 +795,7 @@
   color: #212428;
   font-weight: 400;
   font-size: 14px;
-  border: 1px solid white;
+  border: 1px solid #212428;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,7 +806,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 100px;
   cursor: pointer;
   -webkit-transition: color 0.1s ease;
@@ -732,13 +819,13 @@
 }
 .cases__stages img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .cases__stages span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .cases__stages::before {
   content: "";
@@ -749,15 +836,15 @@
   height: 100%;
   background-color: #212428;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .cases__stages:hover::before {
   top: 0;
 }
 .cases__stages:hover span {
-  color: white;
+  color: #f8f9fa;
 }
 .cases__stages:hover img {
   -webkit-filter: brightness(0) invert(1);
@@ -779,7 +866,7 @@
   color: #212428;
   font-weight: 500;
   font-size: 36px;
-  line-height: 46.8px;
+  line-height: 46px;
 }
 .cases p {
   color: #212428;
@@ -788,8 +875,69 @@
   line-height: 24px;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1000px) {
+  .intro__title {
+    font-size: 60px;
+  }
+  .lending h2,
+  .corporation h2,
+  .internet-shop h2,
+  .redesign h2 {
+    font-size: 26px;
+  }
+  .lending__photo,
+  .corporation__photo,
+  .internet-shop__photo,
+  .redesign__photo {
+    margin: 72px 0px;
+  }
   .tehnology li {
     padding: 8px;
+  }
+  .cases {
+    margin: 145px 0px;
+  }
+  .cases__tittle-btn h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro__title {
+    font-size: 60px;
+  }
+  .lending__photo,
+  .corporation__photo,
+  .internet-shop__photo,
+  .redesign__photo {
+    margin: 72px 0px;
+  }
+  .tehnology li {
+    padding: 8px;
+  }
+  .cases {
+    margin: 145px 0px;
+  }
+  .cases__tittle-btn h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1400px) {
+  .intro__title {
+    font-size: 80px;
+  }
+  .lending__photo,
+  .corporation__photo,
+  .internet-shop__photo,
+  .redesign__photo {
+    margin: 144px 0px;
+  }
+  .tehnology li {
+    padding: 8px 16px;
+  }
+  .cases {
+    margin: 98px 0px;
+  }
+  .cases__tittle-btn h1 {
+    font-size: 50px;
   }
 }

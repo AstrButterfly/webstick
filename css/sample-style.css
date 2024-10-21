@@ -68,7 +68,7 @@ body {
 body h1 {
   color: #212428;
   font-weight: 500;
-  font-size: 80px;
+  font-size: 50px;
 }
 body a {
   position: relative;
@@ -96,8 +96,9 @@ body a:hover:after {
 }
 
 .container {
-  max-width: 1326px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0px 10px;
 }
 
 .header {
@@ -115,7 +116,7 @@ body a:hover:after {
   color: #212428;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 4;
+  z-index: 6;
 }
 .header.sticky .header__btn {
   position: relative;
@@ -143,13 +144,13 @@ body a:hover:after {
 }
 .header.sticky .header__btn img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header.sticky .header__btn span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .header.sticky .header__btn::before {
   content: "";
@@ -160,8 +161,8 @@ body a:hover:after {
   height: 100%;
   background-color: white;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .header.sticky .header__btn:hover::before {
@@ -232,7 +233,7 @@ body a:hover:after {
   color: #212428;
   font-weight: 500;
   font-size: 14px;
-  border: 1px solid white;
+  border: 1px solid #212428;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +244,7 @@ body a:hover:after {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 100px;
   cursor: pointer;
   -webkit-transition: color 0.1s ease;
@@ -251,17 +252,19 @@ body a:hover:after {
   overflow: hidden;
   z-index: 2;
   padding: 11px 16px 11px 24px;
-  margin-left: 1.5rem;
+  margin-left: 18px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .header__btn img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__btn span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .header__btn::before {
   content: "";
@@ -272,19 +275,22 @@ body a:hover:after {
   height: 100%;
   background-color: #212428;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .header__btn:hover::before {
   top: 0;
 }
 .header__btn:hover span {
-  color: white;
+  color: #f8f9fa;
 }
 .header__btn:hover img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
+}
+.header__btn:hover {
+  border: 1px solid #f8f9fa;
 }
 .header-white {
   -webkit-transition: all 0.2s;
@@ -443,7 +449,6 @@ body a:hover:after {
   font-weight: 500;
   font-size: 72px;
   width: 50%;
-  line-height: 82.73px;
   max-width: 636px;
 }
 .pre-footer__content {
@@ -560,7 +565,7 @@ body a:hover:after {
 }
 .pre-footer__form__btn {
   position: relative;
-  color: white;
+  color: #f8f9fa;
   font-weight: 500;
   font-size: 16px;
   border: 1px solid #212428;
@@ -588,13 +593,13 @@ body a:hover:after {
 }
 .pre-footer__form__btn img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .pre-footer__form__btn span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .pre-footer__form__btn::before {
   content: "";
@@ -603,10 +608,10 @@ body a:hover:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .pre-footer__form__btn:hover::before {
@@ -651,7 +656,7 @@ body a:hover:after {
   padding: 12px;
   border-radius: 50%;
   position: relative;
-  color: white;
+  color: #f8f9fa;
   font-weight: 500;
   font-size: 14px;
   border: 1px solid #212428;
@@ -676,13 +681,13 @@ body a:hover:after {
 }
 .footer__wrapper-icon img {
   z-index: 2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .footer__wrapper-icon span {
   z-index: 2;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 .footer__wrapper-icon::before {
   content: "";
@@ -691,10 +696,10 @@ body a:hover:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 0;
 }
 .footer__wrapper-icon:hover::before {
@@ -943,51 +948,45 @@ body a:hover:after {
   background: rgba(0, 0, 0, 0.3);
   z-index: 10;
   display: none;
-}
-
-.blur {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  z-index: 10;
-  -webkit-transition: -webkit-filter 0.3s ease;
-  transition: -webkit-filter 0.3s ease;
-  transition: filter 0.3s ease;
-  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-  .container {
-    max-width: 1150px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 76px;
-  }
+@media (min-width: 375px) {
   .pre-footer__title {
-    font-size: 63px;
+    font-size: 20px;
   }
 }
-@media (max-width: 1000px) {
-  .container {
-    max-width: 950px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 516px) {
+@media (min-width: 516px) {
   .container {
     max-width: 486px;
-    margin: 0 auto;
+    padding: 0px 25px;
+  }
+  .pre-footer__title {
+    font-size: 20px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 1000px) {
   .container {
-    max-width: 355px;
-    margin: 0 auto;
+    max-width: 1150px;
+    padding: 0px 25px;
+  }
+  .sticky .container {
+    padding: 0;
+  }
+  .pre-footer__title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .sticky .container {
+    padding: 0;
+  }
+  .container {
+    max-width: 1296px;
+    padding: 0px 25px;
+  }
+  .pre-footer__title {
+    font-size: 72px;
   }
 }

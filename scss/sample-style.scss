@@ -45,11 +45,11 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background: #f8f9fa;
+  background: $mainBgColor;
   overflow-x: hidden;
 
   h1 {
-    @include font($mainColor, 500, 80px);
+    @include font($mainColor, 500, 50px);
   }
   a {
     position: relative;
@@ -72,8 +72,9 @@ body {
   }
 }
 .container {
-  max-width: 1326px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0px 10px;
 }
 
 .header {
@@ -93,7 +94,7 @@ body {
     left: 0;
     color: $mainColor;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 4;
+    z-index: 6;
 
     .header__btn {
       @include button(white, $mainColor);
@@ -143,13 +144,17 @@ body {
   &__btn {
     @include button();
     padding: 11px 16px 11px 24px;
-    margin-left: 1.5rem;
+    margin-left: 18px;
+    transition: all 0.2s;
+    &:hover {
+      border: 1px solid $mainBgColor;
+    }
   }
 
   &-white {
     transition: all 0.2s;
     color: $mainColor;
-    background-color: #f8f9fa;
+    background-color: $mainBgColor;
 
     &__nav {
       &-item {
@@ -190,7 +195,7 @@ body {
     justify-content: space-between;
     padding: 32px 68px;
 
-    background: #f8f9fa;
+    background: $mainBgColor;
     transition: background-color 0.3s;
     box-shadow: 0px 34px 36px 0px #00000040;
     border-radius: 0px 0px 32px 32px;
@@ -269,7 +274,6 @@ body {
   &__title {
     @include font($mainColor, 500, 72px);
     width: 50%;
-    line-height: 82.73px;
     max-width: 636px;
   }
   &__content {
@@ -377,7 +381,7 @@ body {
 
   &__form {
     &__btn {
-      @include button(white, $mainColor, 500, 16px);
+      @include button($mainBgColor, $mainColor, 500, 16px);
       line-height: 19.2px;
       padding: 18.5px 24px 18.5px 32px;
       width: 167px;
@@ -415,7 +419,7 @@ body {
       height: 56px;
       padding: 12px;
       border-radius: 50%;
-      @include button(white, $mainColor);
+      @include button($mainBgColor, $mainColor);
       background-color: #343a40;
     }
     &-reviewed {
@@ -471,7 +475,7 @@ body {
   &:focus {
     box-shadow: none;
     border-bottom: 1px solid $mainColor;
-    background-color: #f8f9fa;
+    background-color: $mainBgColor;
   }
 }
 
@@ -611,57 +615,66 @@ body {
   background: rgba(0, 0, 0, 0.3);
   z-index: 10;
   display: none;
-}
-
-.blur {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   backdrop-filter: blur(5px);
-  z-index: 10;
-  transition: filter 0.3s ease;
 }
 
-// 1
-@media (max-width: 1200px) {
-  .container {
-    max-width: 1150px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 76px;
-  }
+// 516 - 375
 
+@media (min-width: 375px) {
   .pre-footer {
     &__title {
-      font-size: 63px;
+      font-size: 20px;
     }
   }
 }
 
-// 2
-@media (max-width: 1000px) {
-  .container {
-    max-width: 950px;
-    margin: 0 auto;
-  }
-}
-
-// 3
-@media (max-width: 516px) {
+// 1000 - 516
+@media (min-width: 516px) {
   .container {
     max-width: 486px;
-    margin: 0 auto;
+    padding: 0px 25px;
+  }
+
+  .pre-footer {
+    &__title {
+      font-size: 20px;
+    }
   }
 }
 
-// 4
-@media (max-width: 375px) {
+// 1200-1000
+@media (min-width: 1000px) {
   .container {
-    max-width: 355px;
-    margin: 0 auto;
+    max-width: 1150px;
+    padding: 0px 25px;
+  }
+
+  .sticky {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .pre-footer {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}
+// 1200+
+@media (min-width: 1200px) {
+  .sticky {
+    .container {
+      padding: 0;
+    }
+  }
+  .container {
+    max-width: 1296px;
+    padding: 0px 25px;
+  }
+  .pre-footer {
+    &__title {
+      font-size: 72px;
+    }
   }
 }

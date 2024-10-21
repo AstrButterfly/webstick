@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/sample-style.css" />
     <link rel="stylesheet" href="css/main-style.css" />
@@ -188,6 +192,22 @@
               />
             </div>
           </div>
+          <!-- <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+              </ul>
+            </div>
+          </nav> -->
         </div>
       </div>
     </header>
@@ -261,12 +281,13 @@
       <div class="container">
         <div class="lending__photo lending__photo-first">
           <div class="lending__text-block">
-            <h1>Лендінг пейдж</h1>
+            <h2>Лендінг пейдж</h2>
             <div class="lending__text">
               <p>
-                Створюємо односторінкові сайти, що допоможуть швидко і ефективно
-                просувати окремі продукти чи послуги, привертаючи увагу
-                відвідувачів та стимулюючи конверсії
+                Ми створюємо ефективні лендінг пейджі, що захоплюють увагу
+                користувачів і перетворюють їх у ваших клієнтів. Наші рішення
+                поєднують привабливий дизайн з чіткою структурою, забезпечуючи
+                високу конверсію та досягнення ваших бізнес-цілей
               </p>
             </div>
           </div>
@@ -275,10 +296,26 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-1.jpg" alt="" />
+                  <a
+                    href="./img/index/slider-photos/home-2.png"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      src="./img/index/slider-photos/slide-1.png"
+                      alt="Small Image"
+                    />
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-2.png" alt="" />
+                  <a
+                    href="./img/index/slider-photos/home-1.jpg"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      src="./img/index/slider-photos/slide-2.png"
+                      alt="Small Image"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -303,7 +340,7 @@
       <div class="container">
         <div class="lending__photo">
           <div class="lending__text-block">
-            <h1>Корпоративний вебсайт</h1>
+            <h2>Корпоративний вебсайт</h2>
             <div class="lending__text">
               <p>
                 Індивідуальний дизайн корпоративного вебсайту, що відображає
@@ -318,10 +355,10 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-2.png" alt="" />
+                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-1.jpg" alt="" />
+                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
                 </div>
               </div>
             </div>
@@ -346,7 +383,7 @@
       <div class="container">
         <div class="lending__photo">
           <div class="lending__text-block">
-            <h1>Інтернет-магазин</h1>
+            <h2>Інтернет-магазин</h2>
             <div class="lending__text">
               <p>
                 Створюємо унікальний дизайн інтернет-магазину, що підкреслює
@@ -361,10 +398,10 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-1.jpg" alt="" />
+                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-2.png" alt="" />
+                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
                 </div>
               </div>
             </div>
@@ -389,7 +426,7 @@
       <div class="container">
         <div class="lending__photo">
           <div class="lending__text-block">
-            <h1>Редизайн сайту</h1>
+            <h2>Редизайн сайту</h2>
             <div class="lending__text">
               <p>
                 Реалізуємо сучаснийдизайн для вашого сайту, який покращує
@@ -404,10 +441,10 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-2.png" alt="" />
+                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/home-1.jpg" alt="" />
+                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
                 </div>
               </div>
             </div>
@@ -454,16 +491,8 @@
 
     <section class="cases">
       <div class="container">
-        <div class="cases__tittle-btn">
+        <div class="cases__tittle">
           <h1>Кейси Webstick</h1>
-          <div class="cases__btn">
-            <span>Усі кейси</span>
-            <img
-              src="./img/index/arrows/cases-arrow-up-right.svg"
-              class="arrow"
-              alt=""
-            />
-          </div>
         </div>
         <div class="cases__wrapper">
           <div class="cases__item">
@@ -536,7 +565,7 @@
             </div>
           </div>
         </div>
-        <div class="cases__wrapper">
+        <div class="cases__wrapper cases__last-wrapper">
           <div class="cases__item">
             <div class="cases__content">
               <h2>RLS: розробка мобільного додатку для мережі АЗС</h2>
@@ -568,13 +597,23 @@
             </div>
           </div>
         </div>
+        <div class="cases__btn cases__btn__main">
+          <span>Усі кейси</span>
+          <img
+            src="./img/index/arrows/cases-arrow-up-right-black.svg"
+            class="arrow"
+            alt=""
+          />
+        </div>
       </div>
     </section>
 
     <section class="pre-footer">
       <div class="container">
         <div class="pre-footer__content">
-          <div class="pre-footer__title">Давайте співпрацювати!</div>
+          <div class="pre-footer__title">
+            <p>Давайте<br />співпрацювати!</p>
+          </div>
           <form class="pre-footer__contact-form">
             <div class="form-floating mb-3">
               <input
@@ -783,6 +822,7 @@
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/form.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/tehnology.js"></script>
@@ -794,11 +834,6 @@
         effect: "fade",
         fadeEffect: {
           crossFade: true,
-        },
-        mousewheel: {
-          invert: false,
-          forceToAxis: false,
-          releaseOnEdges: true,
         },
         pagination: {
           el: ".swiper-pagination__1",
@@ -817,11 +852,7 @@
         fadeEffect: {
           crossFade: true,
         },
-        mousewheel: {
-          invert: false,
-          forceToAxis: false,
-          releaseOnEdges: true,
-        },
+
         pagination: {
           el: ".swiper-pagination__2",
           type: "fraction",
@@ -839,11 +870,7 @@
         fadeEffect: {
           crossFade: true,
         },
-        mousewheel: {
-          invert: false,
-          forceToAxis: false,
-          releaseOnEdges: true,
-        },
+
         pagination: {
           el: ".swiper-pagination__3",
           type: "fraction",
@@ -861,11 +888,7 @@
         fadeEffect: {
           crossFade: true,
         },
-        mousewheel: {
-          invert: false,
-          forceToAxis: false,
-          releaseOnEdges: true,
-        },
+
         pagination: {
           el: ".swiper-pagination__4",
           type: "fraction",

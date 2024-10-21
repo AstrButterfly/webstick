@@ -12,6 +12,12 @@
   color: white;
   @include font(white, bold, 24px);
 
+  &__wrapper {
+    max-height: 301px;
+    height: 100%;
+    min-height: 256px;
+  }
+
   &__banner {
     &-img {
       position: absolute;
@@ -23,6 +29,7 @@
       background-repeat: no-repeat;
       z-index: -1;
       background-image: url(../img/index/background-image.png);
+      background-position: 10%;
     }
     &-fade {
       position: absolute;
@@ -39,9 +46,6 @@
     }
   }
 
-  &__title {
-    font-size: 105px;
-  }
   &__subtitle {
     font-weight: 400;
     max-width: 639px;
@@ -68,6 +72,7 @@
     align-items: center;
     gap: 4px;
     transition: all 0.6s;
+
     line-height: 28px;
 
     img {
@@ -87,13 +92,19 @@
   }
 }
 
+.fancybox__bg {
+  backdrop-filter: blur(10px);
+}
+
 .lending,
 .corporation,
 .internet-shop,
 .redesign {
   h1 {
-    @include font($mainColor, 500, 36px);
     white-space: nowrap;
+  }
+  h2 {
+    @include font($mainColor, 500, 26px);
   }
   p {
     @include font($mainColor, 400, 16px);
@@ -101,11 +112,11 @@
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
   }
 
   &__photo {
-    margin: 144px 0px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -133,8 +144,9 @@
 
   .swiper {
     cursor: pointer;
-    height: 674px;
-    overflow-y: scroll;
+    max-height: 674px;
+    width: 100%;
+    overflow-y: hidden;
     box-shadow: 0px 0px 0px 2px #000000; // Border without paddings
     border-radius: 30px;
     scrollbar-width: none;
@@ -150,25 +162,32 @@
       justify-content: center;
       align-items: center;
       gap: 6px;
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
   &__block {
     position: absolute;
     bottom: 32px;
     right: 90px;
-    width: 190px;
+    width: 200px;
 
     border-radius: 50px;
     padding: 25px 0px;
     display: flex;
   }
   &__zoom {
-    padding: 16px;
+    padding: 15px;
     position: absolute;
     bottom: 24px;
     right: 30px;
     width: 56px;
     height: 56px;
+    border: 1px solid white;
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
@@ -178,6 +197,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    a::after {
+      content: none;
+    }
 
     &::before {
       content: "";
@@ -211,11 +234,13 @@
     &__3,
     &__4 {
       border-radius: 50px;
+      border: 1px solid white;
       background-color: white;
-      padding: 16px;
+      padding: 15px;
       width: 56px;
       height: 56px;
       overflow: hidden;
+      z-index: 2;
 
       &::after {
         display: none;
@@ -310,9 +335,7 @@
     display: flex;
   }
   li {
-    padding: 8px 16px;
     @include font($mainColor, 500, 24px);
-
     transition: all 0.1s;
     white-space: nowrap;
     border-bottom: 1px solid $mainColor;
@@ -339,18 +362,22 @@
 }
 
 .cases {
-  margin: 98px 0px;
-
-  &__tittle-btn {
+  &__tittle {
     margin-bottom: 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__btn {
+    margin-top: 32px;
     @include button(white, $mainColor, 500, 16px);
-    padding: 12px 24px 12px 32px;
+    padding: 15px 24px 15px 32px;
     width: 202px;
+    &__main {
+      margin: 32px auto;
+      width: 420px;
+      @include button($mainColor, $mainBgColor, 500, 16px);
+    }
   }
 
   &__item {
@@ -380,9 +407,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &:last-child {
-      border-bottom: 1px solid #b5b5b5;
-    }
+  }
+
+  &__last-wrapper {
+    border-bottom: 1px solid #b5b5b5;
   }
 
   .cases__btns + .cases__btns {
@@ -397,7 +425,7 @@
 
   &__stages {
     padding: 4px 12px;
-    @include button($mainColor, white, 400, 14px);
+    @include button($mainColor, $mainBgColor, 400, 14px);
     border: 1px solid $mainColor;
     line-height: 21px;
     white-space: nowrap;
@@ -414,7 +442,7 @@
 
   h2 {
     @include font($mainColor, 500, 36px);
-    line-height: 46.8px;
+    line-height: 46px;
   }
   p {
     @include font($mainColor, 400, 16px);
@@ -422,22 +450,98 @@
   }
 }
 
-@media (max-width: 1200px) {
+// MEDIA
+// 375-516
+@media (min-width: 375px) {
+}
+
+// 516-1000
+@media (min-width: 516px) {
+}
+
+// 1000-1200
+@media (min-width: 1000px) {
+  .intro {
+    &__title {
+      font-size: 60px;
+    }
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    h2 {
+      font-size: 26px;
+    }
+    &__photo {
+      margin: 72px 0px;
+    }
+  }
   .tehnology {
     li {
       padding: 8px;
     }
   }
+  .cases {
+    margin: 145px 0px;
+    &__tittle-btn h1 {
+      font-size: 40px;
+    }
+  }
 }
 
-// 2
-@media (max-width: 1000px) {
+@media (min-width: 1200px) {
+  .intro {
+    &__title {
+      font-size: 60px;
+    }
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    &__photo {
+      margin: 72px 0px;
+    }
+  }
+  .tehnology {
+    li {
+      padding: 8px;
+    }
+  }
+  .cases {
+    margin: 145px 0px;
+    &__tittle-btn h1 {
+      font-size: 40px;
+    }
+  }
 }
 
-// 3
-@media (max-width: 516px) {
-}
+// 1400+
 
-// 4
-@media (max-width: 375px) {
+@media (min-width: 1400px) {
+  .intro {
+    &__title {
+      font-size: 80px;
+    }
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    &__photo {
+      margin: 144px 0px;
+    }
+  }
+  .tehnology {
+    li {
+      padding: 8px 16px;
+    }
+  }
+  .cases {
+    margin: 98px 0px;
+    &__tittle-btn h1 {
+      font-size: 50px;
+    }
+  }
 }

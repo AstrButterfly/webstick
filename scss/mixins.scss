@@ -8,13 +8,13 @@
 
 @mixin button(
   $color: $mainColor,
-  $background: white,
+  $background: $mainBgColor,
   $fontW: 500,
   $font-size: 14px
 ) {
   position: relative;
   @include font($color, $fontW, $font-size);
-  border: 1px solid $background;
+  border: 1px solid $mainColor;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,12 +28,12 @@
 
   img {
     z-index: 2;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
   }
 
   span {
     z-index: 2;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
   }
 
   &::before {
@@ -45,7 +45,7 @@
     height: 100%;
     background-color: $color;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     z-index: 0;
   }
 
@@ -57,13 +57,13 @@
     span {
       color: $background;
     }
-    @if $background == white {
-      img {
-        filter: brightness(0) invert(1);
-      }
-    } @else if $background == $mainColor {
+    @if $background == $mainColor {
       img {
         filter: brightness(4) invert(1);
+      }
+    } @else if $background == $mainBgColor or $background == white {
+      img {
+        filter: brightness(0) invert(1);
       }
     }
   }
