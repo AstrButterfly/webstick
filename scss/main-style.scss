@@ -369,8 +369,7 @@
     align-items: center;
   }
   &__btn {
-    margin-top: 32px;
-    @include button(white, $mainColor, 500, 16px);
+    @include button($mainBgColor, $mainColor, 500, 16px);
     padding: 15px 24px 15px 32px;
     width: 202px;
     &__main {
@@ -401,6 +400,7 @@
     overflow: hidden;
     border-radius: 32px;
     width: 50%;
+    height: 100%;
   }
 
   &__wrapper {
@@ -413,18 +413,14 @@
     border-bottom: 1px solid #b5b5b5;
   }
 
-  .cases__btns + .cases__btns {
-    margin-top: -20px;
-  }
-
   &__btns {
     gap: 8px;
     display: flex;
-    margin: 0;
+    flex-wrap: wrap;
   }
 
   &__stages {
-    padding: 4px 12px;
+    padding: 5px 10px;
     @include button($mainColor, $mainBgColor, 400, 14px);
     border: 1px solid $mainColor;
     line-height: 21px;
@@ -441,8 +437,8 @@
   }
 
   h2 {
-    @include font($mainColor, 500, 36px);
-    line-height: 46px;
+    @include font($mainColor, 500, 26px);
+    line-height: 31px;
   }
   p {
     @include font($mainColor, 400, 16px);
@@ -457,6 +453,37 @@
 
 // 516-1000
 @media (min-width: 516px) {
+  .intro {
+    &__title {
+      font-size: 60px;
+    }
+    &__wrapper {
+      padding: 0px 7px;
+    }
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    h2 {
+      font-size: 26px;
+    }
+    &__photo {
+      margin: 72px 0px;
+    }
+  }
+  .tehnology {
+    margin: 0 7px;
+    li {
+      padding: 8px;
+    }
+  }
+  .cases {
+    margin: 90px 7px;
+    &__tittle-btn h1 {
+      font-size: 40px;
+    }
+  }
 }
 
 // 1000-1200

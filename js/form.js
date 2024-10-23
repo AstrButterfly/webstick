@@ -71,18 +71,5 @@ function showCountryContainer(phoneInput) {
     }
     phoneInput.removeAttribute("readonly");
   }, 100);
-  console.log("Showed");
+  // console.log("Showed");
 }
-
-// document.querySelector('.pre-footer__contact-form').addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   const fullPhoneNumber = `+${iti.getSelectedCountryData().dialCode}${phoneInput.value.replace(/\s+/g, '')}`;
-//   phoneInput.value = fullPhoneNumber;
-
-//   const formData = new FormData(event.target);
-
-//   for (let [name, value] of formData) {
-//     console.log(`${name}: ${value}`);
-//   }
-// });

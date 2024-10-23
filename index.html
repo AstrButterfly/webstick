@@ -546,11 +546,10 @@
                 </div>
                 <div class="cases__stages"><span>Web development</span></div>
                 <div class="cases__stages"><span>Mobile App</span></div>
-              </div>
-              <div class="cases__btns">
                 <div class="cases__stages"><span>Design</span></div>
                 <div class="cases__stages"><span>Promotion</span></div>
               </div>
+
               <div class="cases__btn">
                 <span>Ознайомитися</span>
                 <img
@@ -612,7 +611,7 @@
       <div class="container">
         <div class="pre-footer__content">
           <div class="pre-footer__title">
-            <p>Давайте<br />співпрацювати!</p>
+            <h1>Давайте<br />співпрацювати!</h1>
           </div>
           <form class="pre-footer__contact-form">
             <div class="form-floating mb-3">
@@ -622,11 +621,12 @@
                 name="name"
                 class="form-control pre-footer__other"
                 placeholder="Ім’я"
-                required
               />
               <label for="name"
                 >Ім’я<span class="pre-footer__red"> *</span></label
               >
+              <div data-validate-for="popup-name" class="form-error" style="display: none;"></div>
+            </div>
             </div>
             <div class="form-floating mb-3">
               <input
@@ -635,23 +635,25 @@
                 name="email"
                 class="form-control"
                 placeholder="E-mail"
-                required
               />
               <label for="email"
                 >E-mail<span class="pre-footer__red"> *</span></label
               >
+              <div data-validate-for="popup-email" class="form-error" style="display: none;"></div>
             </div>
-            <div class="form-floating mb-3">
+            </div>
+            <div class="form-floating mb-3 tel">
               <input
                 type="tel"
                 id="pre-footer_phone"
                 name="phone"
                 class="form-control"
-                required
               />
               <label for="pre-footer_phone" class="telephone"
                 >Телефон<span class="pre-footer__red"> *</span></label
               >
+              <div data-validate-for="popup-phone" class="form-error" style="display: none;"></div>
+            </div>
             </div>
             <div class="form-floating mb-3">
               <input
@@ -660,9 +662,10 @@
                 name="company"
                 class="form-control"
                 placeholder="Компанія"
-                required
               />
               <label for="company">Компанія</label>
+              <div data-validate-for="popup-company" class="form-error" style="display: none;"></div>
+            </div>
             </div>
             <div class="pre-footer__form-group pre-footer__checkbox-group">
               <label for="pre-footer_privacy">
@@ -671,7 +674,6 @@
                   id="pre-footer_privacy"
                   name="privacy"
                   class="pre-footer__checkbox-group-real-checkbox"
-                  required
                 />
                 <span
                   class="required pre-footer__checkbox-group__custom-checkbox"
@@ -683,6 +685,7 @@
                   >політикою конфіденційності</a
                 >.
               </label>
+              <div data-validate-for="popup_privacy" class="form-error" style="display: none;"></div>
             </div>
             <button type="submit" class="pre-footer__form__btn">
               <span>Надіслати</span>
@@ -732,6 +735,12 @@
 
     <div class="overlay" id="overlay"></div>
     <div class="popup" id="popupForm">
+      <div class="popup__thanks" id="popupThanks" style="display: none">
+        <h2>Дякуємо що звернулися у Webstick!</h2>
+        <p>Ми отримали ваш запит і зв'яжемося з вами якомога швидше.</p>
+        <button class="popup__back" id="popupBack"><span>Дякую</span></button>
+      </div>
+
       <div class="popup__content">
         <div class="popup__header">
           <div class="popup__title">Давайте співпрацювати!</div>
@@ -748,12 +757,12 @@
               name="name"
               class="form-control"
               placeholder="Ім’я"
-              required
             />
             <label for="popup-name"
               >Ім’я<span class="popup__red"> *</span></label
             >
           </div>
+          <div data-validate-for="popup-name" class="form-error" style="display: none;"></div>
           <div class="form-floating mb-3">
             <input
               type="email"
@@ -761,24 +770,24 @@
               name="email"
               class="form-control"
               placeholder="E-mail"
-              required
             />
             <label for="popup-email"
               >E-mail<span class="popup__red"> *</span></label
             >
           </div>
-          <div class="form-floating mb-3">
+          <div data-validate-for="popup-email" class="form-error" style="display: none;"></div>
+          <div class="form-floating mb-3 tel">
             <input
               type="tel"
               id="popup-phone"
               name="phone"
               class="form-control"
-              required
             />
             <label for="popup-phone" class="telephone"
               >Телефон<span class="popup__red"> *</span></label
             >
           </div>
+          <div data-validate-for="popup-phone" class="form-error" style="display: none;"></div>
           <div class="form-floating mb-3">
             <input
               type="text"
@@ -792,12 +801,11 @@
           <div class="pre-footer__form-group pre-footer__checkbox-group">
             <label for="popup_privacy">
               <input
-                type="checkbox"
-                id="popup_privacy"
-                name="privacy"
-                class="pre-footer__checkbox-group-real-checkbox"
-                required
-              />
+              type="checkbox"
+              id="popup_privacy"
+              name="privacy"
+              class="pre-footer__checkbox-group-real-checkbox"
+            />
               <span
                 class="required pre-footer__checkbox-group__custom-checkbox"
               ></span
@@ -809,6 +817,8 @@
               >.
             </label>
           </div>
+          <div data-validate-for="popup_privacy" class="form-error"></div>
+
           <button type="submit" class="pre-footer__form__btn">
             <span>Надіслати</span>
             <img
@@ -828,7 +838,7 @@
     <script src="js/form.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/tehnology.js"></script>
-    <script src="js/pop-up.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/header.js"></script>
     <script>
       const swiper_1 = new Swiper(".mySwiper", {
@@ -847,6 +857,23 @@
           prevEl: ".swiper-button-prev__1",
         },
       });
+
+      // const swiper_1_1 = new Swiper(".mySwiper", {
+      //   loop: true,
+      //   effect: "fade",
+      //   fadeEffect: {
+      //     crossFade: true,
+      //   },
+      //   pagination: {
+      //     el: ".swiper-pagination__1_1",
+      //     type: "fraction",
+      //   },
+
+      //   navigation: {
+      //     nextEl: ".swiper-button-next__1",
+      //     prevEl: ".swiper-button-prev__1",
+      //   },
+      // });
 
       const swiper_2 = new Swiper(".mySwiper2", {
         loop: true,

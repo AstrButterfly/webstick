@@ -22,7 +22,7 @@
     display: flex;
     gap: 24px;
     flex-direction: column;
-    background-color: #fff;
+    background-color: $mainBgColor;
     padding: 40px;
     border-radius: 32px;
     width: 50%;
@@ -31,7 +31,6 @@
     z-index: 30;
   }
   &__close {
-    font-size: 30px;
     cursor: pointer;
   }
   &__content form {
@@ -40,6 +39,31 @@
   }
   &__red {
     color: red;
+  }
+
+  &__thanks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 856px;
+    padding: 32px 64px;
+    background-color: $mainBgColor;
+    border-radius: 32px;
+  }
+  &__back {
+    width: 117px;
+    padding: 18.5px 32px;
+    @include button($mainBgColor, $mainColor, 500, 14px);
+  }
+  h2 {
+    font-size: 32px;
+    line-height: normal;
+    font-weight: 700;
+  }
+  p {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 500;
   }
 }
 
@@ -80,7 +104,7 @@ body {
 .header {
   position: absolute;
   width: 100%;
-  color: white;
+  color: $mainBgColor;
   padding: 32px 0px;
   z-index: 1;
   // transition: top 0.5s ease-in-out, background-color 0.3s ease,
@@ -97,7 +121,7 @@ body {
     z-index: 6;
 
     .header__btn {
-      @include button(white, $mainColor);
+      @include button($mainBgColor, $mainColor);
     }
 
     .services-dropdown {
@@ -165,7 +189,7 @@ body {
       filter: brightness(1) invert(1);
     }
     .header__btn {
-      color: white;
+      color: $mainBgColor;
       background-color: $mainColor;
     }
   }
@@ -306,7 +330,7 @@ body {
   }
   &__checkbox-group {
     position: relative;
-    margin: 24px 0px;
+    margin: 2px 0px 24px;
     left: 10px;
     align-items: flex-start;
     line-height: 24px;
@@ -486,6 +510,10 @@ body {
   transition: transform 0.4s ease, color 0.4s ease, font-size 0.3s ease;
   padding-left: 0.75rem;
 }
+.tel label {
+  top: 10px;
+  transform: translateY(10%);
+}
 .form-floating > label {
   padding: 0px;
 }
@@ -506,6 +534,9 @@ body {
 .form-control:not(:placeholder-shown) + .telephone {
   top: 0px;
   color: #000000;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
 }
 
 .form-floating {
@@ -564,14 +595,13 @@ body {
     @include font($mainColor);
     margin-bottom: 0.5rem;
     height: 57px !important;
-    // padding: 25px 0 8px 32px !important;                       // TODO: понять почему не появляется лупа
     padding: 25px 0 8px 6px !important;
     font-size: 16px !important;
     border-bottom: 1px solid #b5b5b5;
     outline: none;
     &::before {
       content: "";
-      background-image: url("/img/index/form/search.svg"); // TODO: понять почему не появляется лупа
+      background-image: url("/img/index/form/search.svg");
       position: absolute;
 
       background-repeat: no-repeat;
@@ -582,6 +612,9 @@ body {
       top: 50%;
       transform: translateY(-50%);
     }
+  }
+  &__country-container.error {
+    top: -10px;
   }
 
   &__country-list {
@@ -617,6 +650,12 @@ body {
   display: none;
   backdrop-filter: blur(5px);
 }
+.form-error {
+  display: none;
+  height: 24px;
+  padding: 4px 0px;
+  color: red;
+}
 
 // 375-516
 @media (min-width: 375px) {
@@ -635,8 +674,24 @@ body {
   }
 
   .pre-footer {
-    &__title {
+    &__title h1 {
       font-size: 20px;
+    }
+  }
+  .sticky {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .header {
+    &__wrapper {
+      padding: 0px 7px;
+    }
+  }
+  .footer {
+    &__all {
+      padding: 0px 7px;
     }
   }
 }
@@ -656,9 +711,9 @@ body {
 
   .pre-footer {
     margin: 0 7px;
-    &__title {
-      font-size: 32px;
-      line-height: 36px;
+    &__title h1 {
+      font-size: 50px;
+      line-height: 1.1;
     }
   }
 
@@ -682,7 +737,7 @@ body {
 
   .pre-footer {
     margin: 0 17px;
-    &__title {
+    &__title h1 {
       font-size: 63px;
       line-height: normal;
     }
@@ -707,7 +762,7 @@ body {
   }
 
   .pre-footer {
-    &__title {
+    &__title h1 {
       font-size: 72px;
       line-height: normal;
     }
