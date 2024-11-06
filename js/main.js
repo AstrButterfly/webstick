@@ -1,6 +1,11 @@
+import { setupValidation } from "./formValidation.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".tehnology__tab ul li");
   const imagesContainer = document.querySelector(".tehnology__images-set");
+
+  const thanksMessage = document.getElementById("popupThanks");
+  const backButton = document.getElementById("popupBack");
 
   // JSON
   const imageSets = {
@@ -83,5 +88,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }, 200);
     });
+  });
+
+  setupValidation(
+    ".pre-footer__contact-form",
+    "name",
+    "email",
+    "pre-footer_phone",
+    "pre-footer_privacy",
+    () => {
+      thanksMessage.style.display = "flex";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("pre-footer_phone").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const privacy = document.getElementById("pre-footer_privacy").checked;
+
+      console.log("Name: " + name);
+      console.log("Email: " + email);
+      console.log("Phone: " + phone);
+      console.log("Company: " + company);
+      console.log("Privacy Policy Accepted: " + privacy);
+    }
+  );
+
+  backButton.addEventListener("click", function () {
+    thanksMessage.style.display = "none";
+    allForm.style.display = "block";
+    popup.style.display = "none";
+    overlay.classList.remove("active");
+    body.classList.remove("noscroll");
   });
 });
