@@ -5,6 +5,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding: 207px 0px 147px;
   padding-top: 5rem;
   padding-bottom: 5rem;
   min-height: 100vh;
@@ -49,11 +50,13 @@
   &__subtitle {
     font-weight: 400;
     max-width: 639px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 30px;
   }
   &__info {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
   }
   &__btn {
@@ -62,8 +65,8 @@
     border: 1px solid white;
     background-color: white;
     color: $mainColor;
-    height: 196px;
-    width: 196px;
+    min-height: 196px;
+    min-width: 196px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -73,7 +76,7 @@
     gap: 4px;
     transition: all 0.6s;
 
-    line-height: 28px;
+    line-height: normal;
 
     img {
       z-index: 2;
@@ -92,14 +95,16 @@
   }
 }
 
-.fancybox__bg {
-  backdrop-filter: blur(10px);
-}
+// .fancybox__bg {
+//   backdrop-filter: blur(10px);
+// }
 
 .lending,
 .corporation,
 .internet-shop,
 .redesign {
+  position: relative;
+
   h1 {
     white-space: nowrap;
   }
@@ -110,13 +115,13 @@
     @include font($mainColor, 400, 16px);
     line-height: 24px;
   }
-
   img {
     max-width: 100%;
     height: 100%;
   }
 
   &__photo {
+    gap: 32px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -126,21 +131,16 @@
   }
 
   &__text-block {
-    gap: 5%;
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
 
   &__text {
-    width: 560px;
     padding: 12px 0px;
     display: flex;
     align-items: center;
   }
-
-  position: relative;
 
   .swiper {
     cursor: pointer;
@@ -151,6 +151,7 @@
     border-radius: 30px;
     scrollbar-width: none;
     &-pagination {
+      border-radius: 200px;
       box-shadow: 0px 7px 9.5px 0px #0000001a;
       background-color: rgb(255, 255, 255);
       @include font($mainColor, 500, 24px);
@@ -175,10 +176,11 @@
     bottom: 32px;
     right: 90px;
     width: 200px;
-
+    font-size: 14px;
     border-radius: 50px;
     padding: 25px 0px;
     display: flex;
+    font-size: 14px;
   }
   &__zoom {
     padding: 15px;
@@ -297,6 +299,29 @@
   }
 }
 
+.swiper-container-zoom {
+  padding: 88px 0px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100%);
+  z-index: 1000;
+  overflow-y: scroll;
+  img {
+    max-height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+  }
+}
+.swiper-container-zoom.active,
+.overlay.active {
+  display: block;
+}
+
 .tehnology {
   &__bar {
     width: 100%;
@@ -319,6 +344,7 @@
     height: 120px;
     &-set {
       display: flex;
+      flex-wrap: wrap;
       gap: 24px;
 
       img {
@@ -335,6 +361,7 @@
     display: flex;
   }
   li {
+    padding: 8px 16px;
     @include font($mainColor, 500, 20px);
     transition: all 0.1s;
     white-space: nowrap;
@@ -447,18 +474,178 @@
 }
 
 // MEDIA
-// 375-516
-@media (min-width: 375px) {
+
+@media (max-width: 375px) {
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    &__block {
+      bottom: 200px;
+    }
+  }
 }
 
-// 516-1000
+// 375-516
+@media (min-width: 375px) {
+  .cases {
+    margin: 72px 0px;
+  }
+}
+
+// tehnology img
+@media (max-width: 516px) {
+  .tehnology {
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+// mobile main
+@media (max-width: 768px) {
+  .intro {
+    &__title {
+      font-size: 50px;
+    }
+    &__info {
+      flex-direction: column;
+      height: 100%;
+      margin-top: 2rem;
+    }
+    &__subtitle {
+      align-self: flex-start;
+    }
+    &__btn {
+      align-self: flex-end;
+      font-size: 16px;
+      min-height: 157px;
+      min-width: 157px;
+      margin-top: 2rem;
+      padding: 1.5rem 0.5rem;
+
+      img {
+        height: 38px;
+        width: 38px;
+      }
+    }
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    &__text-block {
+      flex-direction: column;
+      gap: 16px;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__photo {
+      margin: 50px 0px;
+    }
+    .swiper {
+      &-pagination {
+        font-size: 14px;
+        height: 32px;
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      &__1,
+      &__2,
+      &__3,
+      &__4 {
+        display: none;
+      }
+    }
+    &__block {
+      left: 0px;
+      bottom: 0px;
+      max-width: 62px;
+    }
+
+    &__zoom {
+      right: 10px;
+      bottom: 10px;
+      width: 40px;
+      height: 40px;
+      padding: 11px;
+    }
+  }
+  .cases {
+    margin: 72px 0;
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__photo {
+      width: 100%;
+    }
+
+    &__btns {
+      width: 100%;
+      gap: 8px;
+    }
+
+    &__btn {
+      align-items: center;
+      width: 100%;
+      &__main {
+        width: 100%;
+      }
+    }
+
+    &__mobile {
+      display: block;
+    }
+
+    &__nomobile {
+      display: none;
+    }
+  }
+}
+
+// 516-768
 @media (min-width: 516px) {
   .intro {
     &__title {
       font-size: 60px;
     }
-    &__wrapper {
-      padding: 0px 7px;
+  }
+  .lending,
+  .corporation,
+  .internet-shop,
+  .redesign {
+    h2 {
+      font-size: 24px;
+    }
+  }
+  .tehnology {
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .cases {
+    &__tittle-btn h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+//768-1000
+@media (min-width: 769px) {
+  .intro {
+    &__title {
+      font-size: 60px;
     }
   }
   .lending,
@@ -471,31 +658,29 @@
     &__photo {
       margin: 72px 0px;
     }
+    &__text {
+      width: 444px;
+    }
   }
   .tehnology {
-    margin: 0 7px;
-    li {
-      padding: 8px;
+    img {
+      width: 120px;
+      height: 120px;
     }
   }
   .cases {
-    margin: 90px 7px;
+    margin: 144px 0px;
     &__tittle-btn h1 {
       font-size: 40px;
+    }
+    &__mobile {
+      display: none;
     }
   }
 }
 
 // 1000-1200
 @media (min-width: 1000px) {
-  .intro {
-    &__title {
-      font-size: 60px;
-    }
-    &__wrapper {
-      padding: 0px 7px;
-    }
-  }
   .lending,
   .corporation,
   .internet-shop,
@@ -507,12 +692,6 @@
       margin: 72px 0px;
     }
   }
-  .tehnology {
-    margin: 0 7px;
-    li {
-      padding: 8px;
-    }
-  }
   .cases {
     margin: 90px 7px;
     &__tittle-btn h1 {
@@ -521,16 +700,18 @@
   }
 }
 
-// 1200 - 1400
-@media (min-width: 1200px) {
-  .intro {
-    &__title {
-      font-size: 60px;
-    }
-    &__wrapper {
-      padding: 0px 17px;
+// less 1200
+@media (max-width: 1200px) {
+  .tehnology {
+    margin: 0 0;
+    li {
+      padding: 8px;
     }
   }
+}
+
+// 1200 - 1400
+@media (min-width: 1200px) {
   .lending,
   .corporation,
   .internet-shop,
@@ -539,15 +720,8 @@
       margin: 72px 0px;
     }
   }
-  .tehnology {
-    margin: 0 17px;
-    li {
-      padding: 8px;
-    }
-  }
-
   .cases {
-    margin: 145px 17px;
+    margin: 145px 0px;
 
     &__tittle-btn h1 {
       font-size: 40px;
@@ -572,10 +746,8 @@
     &__photo {
       margin: 144px 0px;
     }
-  }
-  .tehnology {
-    li {
-      padding: 8px 16px;
+    &__text {
+      width: 560px;
     }
   }
   .cases {

@@ -13,7 +13,7 @@ if (typeof window.intlTelInput != "undefined") {
         fetch("https://ipapi.co/json/")
           .then((response) => response.json())
           .then((data) => callback(data.country_code))
-          .catch(() => callback("us"));
+          .catch(() => callback("ua"));
       },
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
@@ -22,7 +22,7 @@ if (typeof window.intlTelInput != "undefined") {
     phoneInput.addEventListener("countrychange", function () {
       const countryCallingCode = iti.getSelectedCountryData().dialCode;
       phoneInput.style.paddingLeft = `${
-        79 + (countryCallingCode.length - 1) * 14
+        79 + (countryCallingCode.length - 1) * 3
       }px`;
     });
 

@@ -3,7 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Webstick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web дизайн</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,10 +16,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/sample-style.css" />
@@ -35,154 +32,165 @@
     />
   </head>
   <body>
-    <div class="blur" style="display: none"></div>
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <div class="header__logo">
+          <a class="header__logo">
             <img src="./img/index/Header-logo.svg" alt="" />
-          </div>
-          <div class="header__nav">
-            <div class="header__nav-item header__nav-item-services">
-              Послуги <img src="./img/index/menu-logo.svg" alt="" />
-              <section class="services-dropdown">
-                <div class="services-dropdown__wrapper">
-                  <div class="services-dropdown__block">
-                    <h2 class="services-dropdown__title">Розробка ПЗ</h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Дослідження і розробка</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Product Development</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >CRM - системи</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >ERP - системи</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >LMS - системи</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Розробка SaaS</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >AWS Cloud</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >DevOps</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="services-dropdown__block">
-                    <h2 class="services-dropdown__title">Web-розробка</h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >WEB додатки</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Розробка сайтів</a
-                        >
-                      </li>
-                    </ul>
-                    <h2 class="services-dropdown__title">Mobile</h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Розробка мобільних додатків</a
-                        >
-                      </li>
-                    </ul>
-                    <h2 class="services-dropdown__title">
-                      Послуги ІТ-аутсорсингу
-                    </h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Виділена команда</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="services-dropdown__block">
-                    <h2 class="services-dropdown__title">Дизайн</h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Web дизайн</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Дизайн мобільних додатків</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >UX/UI дизайн</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Брендинг</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="services-dropdown__block">
-                    <h2 class="services-dropdown__title">Маркетинг</h2>
-                    <ul class="services-dropdown__block-list">
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Послуга SMM</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Просування в соціальних мережах</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >Просування у Google</a
-                        >
-                      </li>
-                      <li class="services-dropdown__block-list-item">
-                        <a href="" class="services-dropdown__block-list-link"
-                          >SEO</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            </div>
+          </a>
 
-            <div class="header__nav-item">Кейси</div>
-            <div class="header__nav-item">Про нас</div>
-            <div class="header__nav-item">Блог</div>
-            <div class="header__nav-item">Контакти</div>
+          <nav class="header__nav">
+            <ul class="header__nav-menu">
+              <div class="header__nav-item header__nav-item-services">
+                Послуги
+                <img src="./img/index/menu-logo.svg" alt="" />
+                <section class="services-dropdown">
+                  <div class="services-dropdown__wrapper">
+                    <div class="services-dropdown__block">
+                      <h2 class="services-dropdown__title">Розробка ПЗ</h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Дослідження і розробка</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Product Development</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >CRM - системи</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >ERP - системи</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >LMS - системи</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Розробка SaaS</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >AWS Cloud</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >DevOps</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="services-dropdown__block">
+                      <h2 class="services-dropdown__title">Web-розробка</h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >WEB додатки</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Розробка сайтів</a
+                          >
+                        </li>
+                      </ul>
+                      <h2 class="services-dropdown__title">Mobile</h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Розробка мобільних додатків</a
+                          >
+                        </li>
+                      </ul>
+                      <h2 class="services-dropdown__title">
+                        Послуги ІТ-аутсорсингу
+                      </h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Виділена команда</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="services-dropdown__block">
+                      <h2 class="services-dropdown__title">Дизайн</h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Web дизайн</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Дизайн мобільних додатків</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >UX/UI дизайн</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Брендинг</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="services-dropdown__block">
+                      <h2 class="services-dropdown__title">Маркетинг</h2>
+                      <ul class="services-dropdown__block-list">
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Послуга SMM</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Просування в соціальних мережах</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >Просування у Google</a
+                          >
+                        </li>
+                        <li class="services-dropdown__block-list-item">
+                          <a href="" class="services-dropdown__block-list-link"
+                            >SEO</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="header__nav-item">
+                <a href="" class="header__nav-href">Кейси</a>
+              </div>
+              <div class="header__nav-item">
+                <a href="" class="header__nav-href">Блог</a>
+              </div>
+              <div class="header__nav-item">
+                <a href="" class="header__nav-href">Про нас</a>
+              </div>
+              <div class="header__nav-item">
+                <a href="" class="header__nav-href">Контакти</a>
+              </div>
+            </ul>
+
             <div class="header__btn">
               <span>Зв’язатися з нами</span>
               <img
@@ -191,23 +199,225 @@
                 alt=""
               />
             </div>
+          </nav>
+          <div class="burger">
+            <span class="burger-line"></span>
           </div>
-          <!-- <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-
-              <span></span>
-              <span></span>
-              <span></span>
-
-              <ul id="menu">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Info</li></a>
-                <a href="#"><li>Contact</li></a>
-              </ul>
+        </div>
+        <div class="header__mob">
+          <div class="header__mob-title main">
+            <div class="header__mob-back">
+              <img src="./img/index/arrows/mob-left.svg" alt="<" />
             </div>
-          </nav> -->
+            <span>Послуги</span>
+          </div>
+          <ul class="header__mob-list">
+            <li>
+              <div class="header__mob-caption">
+                <p>Розробка ПЗ</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Розробка ПЗ</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a href="#">Дослідження і розробка</a>
+                  <img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Product Development</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">CRM - системи</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">ERP - системи</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">LMS - системи</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Розробка SaaS</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">AWS Cloud</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">DevOps</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="header__mob-caption">
+                <p>Web-розробка</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Web-розробка</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a href="#">WEB додатки</a>
+                  <img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Розробка сайтів</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Розробка інтернет магазинів</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Розробка лендінгів</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Розробка корпоративних сайтів</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="header__mob-caption">
+                <p>Mobile</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Mobile</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a href="#">Розробка мобільних додатків</a>
+                  <img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="header__mob-caption">
+                <p>Послуги ІТ-аутсорсингу</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Послуги ІТ-аутсорсингу</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a href="#">Виділена команда</a>
+                  <img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="header__mob-caption">
+                <p>Дизайн</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Дизайн</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a href="#">Web дизайн</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Дизайн мобільних додатків</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">UX/UI дизайн</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Брендинг</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="header__mob-caption">
+                <p>Маркетинг</p>
+                <img src="/img/index/menu-logo.svg" alt="" />
+              </div>
+              <div class="header__mob-title">
+                <div class="header__mob-list-back">
+                  <img
+                    class="header__mob-left"
+                    src="./img/index/arrows/mob-left.svg"
+                    alt="<"
+                  />
+                </div>
+                <span>Маркетинг</span>
+              </div>
+              <ul class="header__mob-inner-list">
+                <li>
+                  <a a href="#">Послуга SMM </a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">Просування в соціальних мережах</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">PPC Services</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+                <li>
+                  <a href="#">SEO</a
+                  ><img src="/img/index/menu-logo.svg" alt="" />
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -227,7 +437,7 @@
                 alt=""
                 class="arrow"
               />
-              Давайте почнемо!
+              Давайте<br />почнемо!
             </div>
           </div>
         </div>
@@ -241,6 +451,9 @@
         <img src="./img/index/slider-logos/GMT.svg" />
         <img src="./img/index/slider-logos/Gardyny.svg" />
         <img src="./img/index/slider-logos/Promfactor.svg" />
+        <img src="./img/index/slider-logos/Panasonic.svg" alt="" />
+        <img src="./img/index/slider-logos/CocaCola.svg" alt="" />
+        <img src="./img/index/slider-logos/SPT.svg" alt="" />
         <img src="./img/index/slider-logos/Olive Crew.svg" />
         <img src="./img/index/slider-logos/Killena.svg" />
         <img src="./img/index/slider-logos/UGOK.svg" />
@@ -259,24 +472,14 @@
         <img src="./img/index/slider-logos/GMT.svg" />
         <img src="./img/index/slider-logos/Gardyny.svg" />
         <img src="./img/index/slider-logos/Promfactor.svg" />
+        <img src="./img/index/slider-logos/Panasonic.svg" alt="" />
+        <img src="./img/index/slider-logos/CocaCola.svg" alt="" />
+        <img src="./img/index/slider-logos/SPT.svg" alt="" />
         <img src="./img/index/slider-logos/Olive Crew.svg" />
         <img src="./img/index/slider-logos/Killena.svg" />
-        <img src="./img/index/slider-logos/UGOK.svg" />
-        <img src="./img/index/slider-logos/RLS.svg" />
-        <img src="./img/index/slider-logos/MasterSolution.svg" />
-        <img src="./img/index/slider-logos/QB Tools.svg" />
-        <img src="./img/index/slider-logos/Jatual.svg" />
-        <img src="./img/index/slider-logos/LP-mobi.svg" />
-        <img src="./img/index/slider-logos/Crayna Cazok.svg" />
-        <img src="./img/index/slider-logos/CrazyVendor.svg" />
-        <img src="./img/index/slider-logos/Nika Zemlyanikina.svg" />
-        <img src="./img/index/slider-logos/DACK.svg" />
-        <img src="./img/index/slider-logos/Carefield.svg" />
       </div>
     </section>
 
-    <!-- TODO: зробити в слайдерах pop-up. На сайті мала картинка, при натиснені на
-      зум робить великим зображення зі скролом. Можна вліво-вправо гортать їх. При зміні картинки в pop-up робиться loading (кружок) -->
     <section class="lending">
       <div class="container">
         <div class="lending__photo lending__photo-first">
@@ -296,26 +499,16 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <a
-                    href="./img/index/slider-photos/home-2.png"
-                    data-fancybox="gallery"
-                  >
-                    <img
-                      src="./img/index/slider-photos/slide-1.png"
-                      alt="Small Image"
-                    />
-                  </a>
+                  <img
+                    src="./img/index/slider-photos/slide-1.png"
+                    alt="Small Image"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <a
-                    href="./img/index/slider-photos/home-1.jpg"
-                    data-fancybox="gallery"
-                  >
-                    <img
-                      src="./img/index/slider-photos/slide-2.png"
-                      alt="Small Image"
-                    />
-                  </a>
+                  <img
+                    src="./img/index/slider-photos/slide-2.png"
+                    alt="Small Image"
+                  />
                 </div>
               </div>
             </div>
@@ -335,6 +528,27 @@
         </div>
       </div>
     </section>
+
+    <div class="swiper-container-zoom">
+      <div class="swiper mySwiperZoom">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/index/slider-photos/home-2.png" alt="Large Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/index/slider-photos/home-1.jpg" alt="Large Image" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination__1_1 swiper-pagination"></div>
+        <div class="swiper-button-prev__1 swiper-button-prev">
+          <img src="./img/index/arrows/slaider-left.svg" alt="" />
+        </div>
+        <div class="swiper-button-next__1 swiper-button-next">
+          <img src="./img/index/arrows/slaider-right.svg" alt="" />
+        </div>
+      </div>
+    </div>
 
     <section class="corporation">
       <div class="container">
@@ -507,6 +721,9 @@
                 продажів, удосконалення маркетингу та ефективної комунікаціїї з
                 клієнтами
               </p>
+              <div class="cases__photo cases__mobile">
+                <img src="./img/index/cases-photos/case-1.jpg" alt="" />
+              </div>
               <div class="cases__btns">
                 <div class="cases__stages"><span>Custom Software</span></div>
                 <div class="cases__stages">
@@ -524,7 +741,7 @@
                 />
               </div>
             </div>
-            <div class="cases__photo">
+            <div class="cases__photo cases__nomobile">
               <img src="./img/index/cases-photos/case-1.jpg" alt="" />
             </div>
           </div>
@@ -539,6 +756,9 @@
                 продажів, удосконалення маркетингу та ефективної комунікаціїї з
                 клієнтами
               </p>
+              <div class="cases__photo cases__mobile">
+                <img src="./img/index/cases-photos/case-2.jpg" alt="" />
+              </div>
               <div class="cases__btns">
                 <div class="cases__stages"><span>Custom Software</span></div>
                 <div class="cases__stages">
@@ -559,7 +779,7 @@
                 />
               </div>
             </div>
-            <div class="cases__photo">
+            <div class="cases__photo cases__nomobile">
               <img src="./img/index/cases-photos/case-2.jpg" alt="" />
             </div>
           </div>
@@ -574,6 +794,9 @@
                 продажів, удосконалення маркетингу та ефективної комунікаціїї з
                 клієнтами
               </p>
+              <div class="cases__photo cases__mobile">
+                <img src="./img/index/cases-photos/case-3.jpg" alt="" />
+              </div>
               <div class="cases__btns">
                 <div class="cases__stages"><span>Mobile App</span></div>
                 <div class="cases__stages"><span>Custom Software</span></div>
@@ -591,7 +814,7 @@
                 />
               </div>
             </div>
-            <div class="cases__photo">
+            <div class="cases__photo cases__nomobile">
               <img src="./img/index/cases-photos/case-3.jpg" alt="" />
             </div>
           </div>
@@ -606,96 +829,165 @@
         </div>
       </div>
     </section>
-
+    <!-- Виправити валідацію -->
     <section class="pre-footer">
       <div class="container">
         <div class="pre-footer__content">
-          <div class="pre-footer__title">
-            <h1>Давайте<br />співпрацювати!</h1>
-          </div>
-          <form class="pre-footer__contact-form">
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-control pre-footer__other"
-                placeholder="Ім’я"
-              />
-              <label for="name"
-                >Ім’я<span class="pre-footer__red"> *</span></label
-              >
-              <div data-validate-for="popup-name" class="form-error" style="display: none;"></div>
+          <div class="pre-footer__wrapper">
+            <div class="pre-footer__title">
+              <h1>Давайте співпрацювати!</h1>
             </div>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                placeholder="E-mail"
-              />
-              <label for="email"
-                >E-mail<span class="pre-footer__red"> *</span></label
-              >
-              <div data-validate-for="popup-email" class="form-error" style="display: none;"></div>
-            </div>
-            </div>
-            <div class="form-floating mb-3 tel">
-              <input
-                type="tel"
-                id="pre-footer_phone"
-                name="phone"
-                class="form-control"
-              />
-              <label for="pre-footer_phone" class="telephone"
-                >Телефон<span class="pre-footer__red"> *</span></label
-              >
-              <div data-validate-for="popup-phone" class="form-error" style="display: none;"></div>
-            </div>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                id="company"
-                name="company"
-                class="form-control"
-                placeholder="Компанія"
-              />
-              <label for="company">Компанія</label>
-              <div data-validate-for="popup-company" class="form-error" style="display: none;"></div>
-            </div>
-            </div>
-            <div class="pre-footer__form-group pre-footer__checkbox-group">
-              <label for="pre-footer_privacy">
+            <form class="pre-footer__contact-form">
+              <div class="form-floating mb-3">
                 <input
-                  type="checkbox"
-                  id="pre-footer_privacy"
-                  name="privacy"
-                  class="pre-footer__checkbox-group-real-checkbox"
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control pre-footer__other"
+                  placeholder="Ім’я"
                 />
-                <span
-                  class="required pre-footer__checkbox-group__custom-checkbox"
-                ></span
-                ><span class="pre-footer__red"> *</span>
-                Ми додамо вашу інформацію до нашої CRM, щоб зв’язатися з вами
-                щодо вашого запиту. Щоб дізнатися більше, ознайомтеся з нашою
-                <a href="#" class="pre-footer__policy-link"
-                  >політикою конфіденційності</a
-                >.
-              </label>
-              <div data-validate-for="popup_privacy" class="form-error" style="display: none;"></div>
+                <label for="name"
+                  >Ім’я<span class="pre-footer__red"> *</span></label
+                >
+                <div
+                  data-validate-for="popup-name"
+                  class="form-error"
+                  style="display: none"
+                ></div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+                <label for="email"
+                  >E-mail<span class="pre-footer__red"> *</span></label
+                >
+                <div
+                  data-validate-for="popup-email"
+                  class="form-error"
+                  style="display: none"
+                ></div>
+              </div>
+              <div class="form-floating mb-3 tel">
+                <input
+                  type="tel"
+                  id="pre-footer_phone"
+                  name="phone"
+                  class="form-control"
+                />
+                <label for="pre-footer_phone" class="telephone"
+                  >Телефон<span class="pre-footer__red"> *</span></label
+                >
+                <div
+                  data-validate-for="popup-phone"
+                  class="form-error"
+                  style="display: none"
+                ></div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-control"
+                  placeholder="Компанія"
+                />
+                <label for="company">Компанія</label>
+                <div
+                  data-validate-for="popup-company"
+                  class="form-error"
+                  style="display: none"
+                ></div>
+              </div>
+              <div class="pre-footer__form-group pre-footer__checkbox-group">
+                <label for="pre-footer_privacy">
+                  <input
+                    type="checkbox"
+                    id="pre-footer_privacy"
+                    name="privacy"
+                    class="pre-footer__checkbox-group-real-checkbox"
+                  />
+                  <span
+                    class="required pre-footer__checkbox-group__custom-checkbox"
+                  ></span
+                  ><span class="pre-footer__red"> *</span>
+                  Ми додамо вашу інформацію до нашої CRM, щоб зв’язатися з вами
+                  щодо вашого запиту. Щоб дізнатися більше, ознайомтеся з нашою
+                  <a href="#" class="pre-footer__policy-link"
+                    >політикою конфіденційності</a
+                  >.
+                </label>
+                <div
+                  data-validate-for="popup_privacy"
+                  class="form-error"
+                  style="display: none"
+                ></div>
+              </div>
+              <button type="submit" class="pre-footer__form__btn">
+                <span>Надіслати</span>
+                <img
+                  src="./img/index/arrows/cases-arrow-up-right.svg"
+                  class="arrow"
+                  alt=""
+                />
+              </button>
+            </form>
+          </div>
+          <div class="pre-footer__contacts">
+            <div class="pre-footer__contacts-offices">
+              <h4>Наші офіси</h4>
+              <div class="pre-footer__contacts-countries">
+                <div class="pre-footer__contacts-countryBlock">
+                  <div class="pre-footer__contacts-country">
+                    <p class="pre-footer__contacts-countryName">Україна</p>
+                    <img src="./img/index/form/ua.png" alt="" />
+                  </div>
+                  <div class="pre-footer__contacts-blockText">
+                    <p class="pre-footer__contacts-countryText">
+                      м. Кривий Ріг
+                    </p>
+                    <a class="pre-footer__contacts-countryText">
+                      +380979405664
+                    </a>
+                  </div>
+                </div>
+                <div class="pre-footer__contacts-countryBlock">
+                  <div class="pre-footer__contacts-country">
+                    <p class="pre-footer__contacts-countryName">Австралія</p>
+                    <img src="./img/index/form/au.png" alt="" />
+                  </div>
+                  <div class="pre-footer__contacts-blockText">
+                    <p class="pre-footer__contacts-countryText">
+                      51 - 57 Norton St, Leichhardt
+                    </p>
+                    <a class="pre-footer__contacts-countryText">+61434206011</a>
+                  </div>
+                </div>
+                <div class="pre-footer__contacts-countryBlock">
+                  <div class="pre-footer__contacts-country">
+                    <p class="pre-footer__contacts-countryName">Ізраїль</p>
+                    <img src="./img/index/form/il.png" alt="" />
+                  </div>
+                  <div class="pre-footer__contacts-blockText">
+                    <p class="pre-footer__contacts-countryText">
+                      Arlozorov St 55, Safed
+                    </p>
+                    <a class="pre-footer__contacts-countryText">
+                      +972528689801
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="pre-footer__form__btn">
-              <span>Надіслати</span>
-              <img
-                src="./img/index/arrows/cases-arrow-up-right.svg"
-                class="arrow"
-                alt=""
-              />
-            </button>
-          </form>
+            <div class="pre-footer__contacts__emailBlock">
+              <h4>Напишіть нам</h4>
+              <p>businessdevelopment@webstickglobal.com</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -703,31 +995,41 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__all">
-          <div class="footer__icons">
+          <div class="footer__branding">
             <div class="footer__logo">
               <img src="./img/index/Footer-logo.svg" alt="" />
             </div>
-            <div class="footer__wrapper">
-              <div class="footer__wrapper-icon">
-                <img src="./img/index/footer/icon_linkedin.svg" alt="" />
-              </div>
-              <div class="footer__wrapper-icon">
-                <img src="./img/index/footer/icon_instagram.svg" alt="" />
-              </div>
-              <div class="footer__wrapper-reviewed">
-                <img src="./img/index/footer/reviewed.jpg" alt="" />
-              </div>
-            </div>
+            <p>IT-розробка та рішення, які перевершать ваші очікування</p>
           </div>
-          <div class="footer__text">
-            <p>IT-розробка та рішення, які перевершать ваші очікування</p>
-            <div class="footer__other">
-              <p>© 2014 Webstick Global</p>
-              <div class="footer__other-policy">
+
+          <div class="footer__others">
+            <div class="footer__icons">
+              <a
+                class="footer__icons-icon"
+                href="https://www.linkedin.com/company/webstickglobal"
+              >
+                <img src="./img/index/footer/icon_linkedin.svg" alt="" />
+              </a>
+              <a
+                class="footer__icons-icon"
+                href="https://www.instagram.com/webstick.global?igsh=MTJodnFzNHM2aDBxcw%3D%3D&utm_source=qr"
+              >
+                <img src="./img/index/footer/icon_instagram.svg" alt="" />
+              </a>
+              <a
+                class="footer__icons-reviewed"
+                href="https://clutch.co/profile/webstick-global"
+              >
+                <img src="./img/index/footer/reviewed.jpg" alt="" />
+              </a>
+            </div>
+            <ul class="footer__text">
+              <div class="footer__text-item"><p>© 2014 Webstick Global</p></div>
+              <div class="footer__text-item">
                 <a>Політика конфіденційності</a>
                 <div class="footer__text-other-policy-line"></div>
               </div>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
@@ -762,7 +1064,11 @@
               >Ім’я<span class="popup__red"> *</span></label
             >
           </div>
-          <div data-validate-for="popup-name" class="form-error" style="display: none;"></div>
+          <div
+            data-validate-for="popup-name"
+            class="form-error"
+            style="display: none"
+          ></div>
           <div class="form-floating mb-3">
             <input
               type="email"
@@ -775,7 +1081,11 @@
               >E-mail<span class="popup__red"> *</span></label
             >
           </div>
-          <div data-validate-for="popup-email" class="form-error" style="display: none;"></div>
+          <div
+            data-validate-for="popup-email"
+            class="form-error"
+            style="display: none"
+          ></div>
           <div class="form-floating mb-3 tel">
             <input
               type="tel"
@@ -787,7 +1097,11 @@
               >Телефон<span class="popup__red"> *</span></label
             >
           </div>
-          <div data-validate-for="popup-phone" class="form-error" style="display: none;"></div>
+          <div
+            data-validate-for="popup-phone"
+            class="form-error"
+            style="display: none"
+          ></div>
           <div class="form-floating mb-3">
             <input
               type="text"
@@ -801,11 +1115,11 @@
           <div class="pre-footer__form-group pre-footer__checkbox-group">
             <label for="popup_privacy">
               <input
-              type="checkbox"
-              id="popup_privacy"
-              name="privacy"
-              class="pre-footer__checkbox-group-real-checkbox"
-            />
+                type="checkbox"
+                id="popup_privacy"
+                name="privacy"
+                class="pre-footer__checkbox-group-real-checkbox"
+              />
               <span
                 class="required pre-footer__checkbox-group__custom-checkbox"
               ></span
@@ -819,7 +1133,7 @@
           </div>
           <div data-validate-for="popup_privacy" class="form-error"></div>
 
-          <button type="submit" class="pre-footer__form__btn">
+          <button type="submit" class="pre-footer__form__btn popup__btn">
             <span>Надіслати</span>
             <img
               src="./img/index/arrows/cases-arrow-up-right.svg"
@@ -834,10 +1148,8 @@
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/form.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/tehnology.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/header.js"></script>
     <script>
@@ -858,22 +1170,51 @@
         },
       });
 
-      // const swiper_1_1 = new Swiper(".mySwiper", {
-      //   loop: true,
-      //   effect: "fade",
-      //   fadeEffect: {
-      //     crossFade: true,
-      //   },
-      //   pagination: {
-      //     el: ".swiper-pagination__1_1",
-      //     type: "fraction",
-      //   },
+      const swiper_1_1 = new Swiper(".mySwiperZoom1", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination__1_1",
+          type: "fraction",
+        },
 
-      //   navigation: {
-      //     nextEl: ".swiper-button-next__1",
-      //     prevEl: ".swiper-button-prev__1",
-      //   },
-      // });
+        navigation: {
+          nextEl: ".swiper-button-next__1",
+          prevEl: ".swiper-button-prev__1",
+        },
+      });
+
+      const overlay = document.querySelector(".overlay");
+      const swiperZoomContainer = document.querySelector(
+        ".swiper-container-zoom"
+      );
+      const zoomButton = document.querySelector(".lending__zoom");
+      const body = document.querySelector("body");
+
+      zoomButton.addEventListener("click", function () {
+        overlay.classList.add("active");
+        swiperZoomContainer.classList.add("active");
+        body.classList.add("noscroll");
+      });
+
+      overlay.addEventListener("click", function () {
+        overlay.classList.remove("active");
+        swiperZoomContainer.classList.remove("active");
+
+        body.classList.remove("noscroll");
+      });
+
+      swiperZoomContainer.addEventListener("click", function (e) {
+        if (!e.target.closest(".swiper-slide img")) {
+          overlay.classList.remove("active");
+          swiperZoomContainer.classList.remove("active");
+
+          body.classList.remove("noscroll");
+        }
+      });
 
       const swiper_2 = new Swiper(".mySwiper2", {
         loop: true,

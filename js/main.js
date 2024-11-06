@@ -9,24 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
       "./img/index/tehnology-logos/Language-programming/Technoligia-1.png",
       "./img/index/tehnology-logos/Language-programming/Technoligia-2.png",
       "./img/index/tehnology-logos/Language-programming/Technoligia-3.png",
-      "./img/index/tehnology-logos/Language-programming/Technoligia-4.png"
+      "./img/index/tehnology-logos/Language-programming/Technoligia-4.png",
     ],
-    "Backend": [
+    Backend: [
       "./img/index/tehnology-logos/Backend/Technoligia.png",
       "./img/index/tehnology-logos/Backend/Technoligia-1.png",
       "./img/index/tehnology-logos/Backend/Technoligia-2.png",
       "./img/index/tehnology-logos/Backend/Technoligia-3.png",
       "./img/index/tehnology-logos/Backend/Technoligia-4.png",
-      "./img/index/tehnology-logos/Backend/Technoligia-5.png"
+      "./img/index/tehnology-logos/Backend/Technoligia-5.png",
     ],
-    "Frontend": [
+    Frontend: [
       "./img/index/tehnology-logos/Frontend/Technoligia.png",
       "./img/index/tehnology-logos/Frontend/Technoligia-1.png",
-      "./img/index/tehnology-logos/Frontend/Technoligia-2.png"
+      "./img/index/tehnology-logos/Frontend/Technoligia-2.png",
     ],
     "Мобільна розробка": [
       "./img/index/tehnology-logos/Frontend/Technoligia.png",
-      "./img/index/tehnology-logos/Mobile-development/Technoligia.png"
+      "./img/index/tehnology-logos/Mobile-development/Technoligia.png",
     ],
     "Бази даних": [
       "./img/index/tehnology-logos/Data-base/Technoligia.png",
@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "./img/index/tehnology-logos/Data-base/Technoligia-3.png",
       "./img/index/tehnology-logos/Data-base/Technoligia-4.png",
       "./img/index/tehnology-logos/Data-base/Technoligia-5.png",
-      "./img/index/tehnology-logos/Data-base/Technoligia-6.png"
+      "./img/index/tehnology-logos/Data-base/Technoligia-6.png",
     ],
     "Надійні партнери": [
       "./img/index/tehnology-logos/Reliable-partners/Technoligia.png",
       "./img/index/tehnology-logos/Reliable-partners/Technoligia-1.png",
       "./img/index/tehnology-logos/Reliable-partners/Technoligia-2.png",
       "./img/index/tehnology-logos/Reliable-partners/Technoligia-3.png",
-      "./img/index/tehnology-logos/Reliable-partners/Technoligia-4.png"
-    ]
+      "./img/index/tehnology-logos/Reliable-partners/Technoligia-4.png",
+    ],
   };
 
   const defaultImages = imageSets["Мови програмування"];
@@ -83,5 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }, 200);
     });
-  })
+  });
 });
