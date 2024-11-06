@@ -1550,6 +1550,9 @@ body p {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }
+  .services-dropdown {
+    display: none;
+  }
   .burger {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;

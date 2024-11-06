@@ -14,7 +14,6 @@ const servicesDropdown = document.querySelector(".services-dropdown");
 const showAllListItems = () => {
   listItems.forEach((li) => {
     li.classList.remove("selected");
-    console.log("All");
     li.style.display = "block";
 
     const title = li.querySelector(".header__mob-title");
@@ -32,12 +31,10 @@ listItems.forEach((item) => {
   item.addEventListener("click", () => {
     listItems.forEach((li) => {
       li.classList.remove("selected");
-      console.log("removeItem");
       li.style.display = "none";
     });
 
     item.classList.add("selected");
-    console.log("addMainItem");
     item.style.display = "block";
 
     const innerItems = item.querySelectorAll("li");
@@ -51,7 +48,6 @@ listItems.forEach((item) => {
 
     if (title) {
       title.classList.add("active");
-      console.log("2");
     }
     if (innerList) innerList.classList.add("active");
     if (caption) caption.style.display = "none";
@@ -59,10 +55,8 @@ listItems.forEach((item) => {
 });
 
 const backMenu = () => {
-  console.log("FunctionStart");
   listItems.forEach((li) => {
     li.classList.remove("selected");
-    console.log("back");
     li.style.display = "block";
 
     const title = li.querySelector(".header__mob-title");
@@ -72,7 +66,6 @@ const backMenu = () => {
     if (caption) caption.style.display = "flex";
     if (title) {
       title.classList.remove("active");
-      console.log("1");
     }
     if (innerList) innerList.classList.remove("active");
   });
@@ -81,7 +74,6 @@ const backMenu = () => {
 
 listBack.forEach((backArrow) => {
   backArrow.addEventListener("click", () => {
-    console.log("Back arrow clicked in item");
     setTimeout(() => {
       backMenu();
     }, 0);
