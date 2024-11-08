@@ -190,7 +190,11 @@ body a {
 .header-white .header__nav-href {
   color: #212428;
 }
-.header-white img {
+.header-white .header__nav-item-services img {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
+.header-white .header__logo img {
   -webkit-filter: brightness(1) invert(1);
           filter: brightness(1) invert(1);
 }
@@ -1546,6 +1550,10 @@ body a {
   .header.menu-active {
     padding: 1rem 0;
   }
+  .header.menu-active .header img {
+    -webkit-filter: brightness(1) invert(1);
+            filter: brightness(1) invert(1);
+  }
   .header.menu-active .header__btn {
     position: relative;
     z-index: -1;
@@ -1558,7 +1566,7 @@ body a {
     z-index: 2;
   }
   .header.menu-active .header__logo img {
-    max-height: 1.6rem;
+    max-height: 1.6rem !important;
     max-width: 150px;
   }
   .header.menu-active .header__nav-item {
@@ -1582,11 +1590,14 @@ body a {
   .header-white .header__nav-href {
     color: #f8f9fa;
   }
-  .header-white .burger.open span, .header-white .burger.open::before, .header-white .burger.open::after {
-    -webkit-filter: brightness(0) invert(1);
-            filter: brightness(0) invert(1);
+  .header-white .header__btn {
+    background-color: #f8f9fa;
   }
-  .header.menu-active img {
+  .header-white .header__btn img {
+    -webkit-filter: brightness(0) invert(0);
+            filter: brightness(0) invert(0);
+  }
+  .header-white .burger.open span, .header-white .burger.open::before, .header-white .burger.open::after {
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1);
   }

@@ -1,6 +1,6 @@
 @import "variables";
 
-@mixin font($color: #ffffff, $fontW: 400, $font-size: 14px) {
+@mixin font($color: $mainBgColor, $fontW: 400, $font-size: 14px) {
   color: $color;
   font-weight: $fontW;
   font-size: $font-size;

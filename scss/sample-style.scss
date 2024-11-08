@@ -106,13 +106,20 @@ body {
     transition: all 0.2s;
     color: $mainColor;
     background-color: $mainBgColor;
-    .header__nav {
-      &-href {
-        color: $mainColor;
+    .header {
+      &__nav {
+        &-href {
+          color: $mainColor;
+        }
+        &-item-services {
+          img {
+            filter: brightness(1) invert(1);
+          }
+        }
       }
-    }
-    img {
-      filter: brightness(1) invert(1);
+      &__logo img {
+        filter: brightness(1) invert(1);
+      }
     }
     .burger-line,
     .burger::after,
@@ -1101,6 +1108,9 @@ body {
     &.menu-active {
       padding: 1rem 0;
       .header {
+        img {
+          filter: brightness(1) invert(1);
+        }
         &__btn {
           position: relative;
           z-index: -1;
@@ -1111,7 +1121,7 @@ body {
         &__logo {
           display: none;
           img {
-            max-height: 1.6rem;
+            max-height: 1.6rem !important;
             max-width: 150px;
           }
 
@@ -1139,17 +1149,20 @@ body {
       .header__nav-href {
         color: $mainBgColor;
       }
+      .header {
+        &__btn {
+          background-color: $mainBgColor;
+          img {
+            filter: brightness(0) invert(0);
+          }
+        }
+      }
       .burger.open {
         span,
         &::before,
         &::after {
           filter: brightness(0) invert(1);
         }
-      }
-    }
-    &.menu-active {
-      img {
-        filter: brightness(0) invert(1);
       }
     }
   }
