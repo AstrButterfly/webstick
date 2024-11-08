@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web дизайн</title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
@@ -42,7 +46,7 @@
           <nav class="header__nav">
             <ul class="header__nav-menu">
               <div class="header__nav-item header__nav-item-services">
-                Послуги
+                <p>Послуги</p>
                 <img src="./img/index/menu-logo.svg" alt="" />
                 <section class="services-dropdown">
                   <div class="services-dropdown__wrapper">
@@ -499,16 +503,26 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img
-                    src="./img/index/slider-photos/slide-1.png"
-                    alt="Small Image"
-                  />
+                  <a
+                    href="/img/index/slider-photos/home-1.png"
+                    data-fancybox="gallery__lending"
+                  >
+                    <img
+                      src="./img/index/slider-photos/slide-1.png"
+                      alt="Small Image"
+                    />
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img
-                    src="./img/index/slider-photos/slide-2.png"
-                    alt="Small Image"
-                  />
+                  <a
+                    href="/img/index/slider-photos/home-2.jpg"
+                    data-fancybox="gallery__lending"
+                  >
+                    <img
+                      src="./img/index/slider-photos/slide-2.png"
+                      alt="Small Image"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -529,33 +543,18 @@
       </div>
     </section>
 
-    <div class="swiper-container-zoom">
-      <div class="swiper mySwiperZoom">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./img/index/slider-photos/home-2.png" alt="Large Image" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/index/slider-photos/home-1.jpg" alt="Large Image" />
-          </div>
-        </div>
+    <!-- <div class="swiper-container-zoom">
 
-        <div class="swiper-pagination__1_1 swiper-pagination"></div>
-        <div class="swiper-button-prev__1 swiper-button-prev">
-          <img src="./img/index/arrows/slaider-left.svg" alt="" />
-        </div>
-        <div class="swiper-button-next__1 swiper-button-next">
-          <img src="./img/index/arrows/slaider-right.svg" alt="" />
-        </div>
-      </div>
-    </div>
+        <img src="./img/index/slider-photos/home-2.jpg" alt="Large Image" />
+      </a>
+    </div> -->
 
     <section class="corporation">
       <div class="container">
-        <div class="lending__photo">
-          <div class="lending__text-block">
+        <div class="corporation__photo">
+          <div class="corporation__text-block">
             <h2>Корпоративний вебсайт</h2>
-            <div class="lending__text">
+            <div class="corporation__text">
               <p>
                 Індивідуальний дизайн корпоративного вебсайту, що відображає
                 сутність вашого бренду і підвищує його впізнаваність. Сучасний
@@ -564,19 +563,29 @@
               </p>
             </div>
           </div>
-          <div class="lending__wrapper">
+          <div class="corporation__wrapper">
             <div class="swiper mySwiper2">
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-2.jpg"
+                    data-fancybox="gallery__corporation"
+                  >
+                    <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-1.png"
+                    data-fancybox="gallery__corporation"
+                  >
+                    <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="lending__block">
+            <div class="corporation__block">
               <div class="swiper-pagination__2 swiper-pagination"></div>
               <div class="swiper-button-prev__2 swiper-button-prev">
                 <img src="./img/index/arrows/slaider-left.svg" alt="" />
@@ -595,10 +604,10 @@
 
     <section class="internet-shop">
       <div class="container">
-        <div class="lending__photo">
-          <div class="lending__text-block">
+        <div class="internet-shop__photo">
+          <div class="internet-shop__text-block">
             <h2>Інтернет-магазин</h2>
-            <div class="lending__text">
+            <div class="internet-shop__text">
               <p>
                 Створюємо унікальний дизайн інтернет-магазину, що підкреслює
                 айдентику вашого бренду та підвищує продажі. Зручна навігація,
@@ -607,19 +616,29 @@
               </p>
             </div>
           </div>
-          <div class="lending__wrapper">
+          <div class="internet-shop__wrapper">
             <div class="swiper mySwiper3">
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-1.png"
+                    data-fancybox="gallery__internet-shop"
+                  >
+                    <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-2.jpg"
+                    data-fancybox="gallery__internet-shop"
+                  >
+                    <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="lending__block">
+            <div class="internet-shop__block">
               <div class="swiper-pagination__3 swiper-pagination"></div>
               <div class="swiper-button-prev__3 swiper-button-prev">
                 <img src="./img/index/arrows/slaider-left.svg" alt="" />
@@ -638,10 +657,10 @@
 
     <section class="redesign">
       <div class="container">
-        <div class="lending__photo">
-          <div class="lending__text-block">
+        <div class="redesign__photo">
+          <div class="redesign__text-block">
             <h2>Редизайн сайту</h2>
-            <div class="lending__text">
+            <div class="redesign__text">
               <p>
                 Реалізуємо сучаснийдизайн для вашого сайту, який покращує
                 користувацький досвід і підвищує ефективність. Оновлений
@@ -650,19 +669,29 @@
               </p>
             </div>
           </div>
-          <div class="lending__wrapper">
+          <div class="redesign__wrapper">
             <div class="swiper mySwiper4">
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-2.jpg"
+                    data-fancybox="gallery__redesign"
+                  >
+                    <img src="./img/index/slider-photos/slide-2.png" alt="" />
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  <a
+                    href="/img/index/slider-photos/home-1.png"
+                    data-fancybox="gallery__redesign"
+                  >
+                    <img src="./img/index/slider-photos/slide-1.png" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="lending__block">
+            <div class="redesign__block">
               <div class="swiper-pagination__4 swiper-pagination"></div>
               <div class="swiper-button-prev__4 swiper-button-prev">
                 <img src="./img/index/arrows/slaider-left.svg" alt="" />
@@ -1037,7 +1066,6 @@
       </div>
     </footer>
 
-    <!-- TODO: Сделать чтобы отображался popupThanks после отправки в pre-footer (щас оно в popup)!-->
     <div class="overlay" id="overlay"></div>
     <div class="popup" id="popupForm">
       <div class="popup__thanks" id="popupThanks" style="display: none">
@@ -1060,7 +1088,7 @@
               type="text"
               id="popup-name"
               name="name"
-              class="form-control"
+              class="form-control form-control-popup"
               placeholder="Ім’я"
             />
             <label for="popup-name"
@@ -1077,7 +1105,7 @@
               type="email"
               id="popup-email"
               name="email"
-              class="form-control"
+              class="form-control form-control-popup"
               placeholder="E-mail"
             />
             <label for="popup-email"
@@ -1094,7 +1122,7 @@
               type="tel"
               id="popup-phone"
               name="phone"
-              class="form-control"
+              class="form-control form-control-popup"
             />
             <label for="popup-phone" class="telephone"
               >Телефон<span class="popup__red"> *</span></label
@@ -1110,7 +1138,7 @@
               type="text"
               id="popup-company"
               name="company"
-              class="form-control"
+              class="form-control form-control-popup"
               placeholder="Компанія"
             />
             <label for="popup-company">Компанія</label>
@@ -1151,10 +1179,13 @@
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.2/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/form.js"></script>
+    <script src="/js/fancybox.js"></script>
+    <script src="js/header.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/popup.js"></script>
-    <script src="js/header.js"></script>
+
     <script>
       const swiper_1 = new Swiper(".mySwiper", {
         loop: true,
@@ -1173,51 +1204,34 @@
         },
       });
 
-      const swiper_1_1 = new Swiper(".mySwiperZoom1", {
-        loop: true,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        pagination: {
-          el: ".swiper-pagination__1_1",
-          type: "fraction",
-        },
+      // const overlay = document.querySelector(".overlay");
+      // const swiperZoomContainer = document.querySelector(
+      //   ".swiper-container-zoom"
+      // );
+      // const zoomButton = document.querySelector(".lending__zoom");
+      // const body = document.querySelector("body");
 
-        navigation: {
-          nextEl: ".swiper-button-next__1",
-          prevEl: ".swiper-button-prev__1",
-        },
-      });
+      // zoomButton.addEventListener("click", function () {
+      //   overlay.classList.add("active");
+      //   swiperZoomContainer.classList.add("active");
+      //   body.classList.add("noscroll");
+      // });
 
-      const overlay = document.querySelector(".overlay");
-      const swiperZoomContainer = document.querySelector(
-        ".swiper-container-zoom"
-      );
-      const zoomButton = document.querySelector(".lending__zoom");
-      const body = document.querySelector("body");
+      // overlay.addEventListener("click", function () {
+      //   overlay.classList.remove("active");
+      //   swiperZoomContainer.classList.remove("active");
 
-      zoomButton.addEventListener("click", function () {
-        overlay.classList.add("active");
-        swiperZoomContainer.classList.add("active");
-        body.classList.add("noscroll");
-      });
+      //   body.classList.remove("noscroll");
+      // });
 
-      overlay.addEventListener("click", function () {
-        overlay.classList.remove("active");
-        swiperZoomContainer.classList.remove("active");
+      // swiperZoomContainer.addEventListener("click", function (e) {
+      //   if (!e.target.closest(".swiper-slide img")) {
+      //     overlay.classList.remove("active");
+      //     swiperZoomContainer.classList.remove("active");
 
-        body.classList.remove("noscroll");
-      });
-
-      swiperZoomContainer.addEventListener("click", function (e) {
-        if (!e.target.closest(".swiper-slide img")) {
-          overlay.classList.remove("active");
-          swiperZoomContainer.classList.remove("active");
-
-          body.classList.remove("noscroll");
-        }
-      });
+      //     body.classList.remove("noscroll");
+      //   }
+      // });
 
       const swiper_2 = new Swiper(".mySwiper2", {
         loop: true,

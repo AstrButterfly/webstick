@@ -95,10 +95,6 @@
   }
 }
 
-// .fancybox__bg {
-//   backdrop-filter: blur(10px);
-// }
-
 .lending,
 .corporation,
 .internet-shop,
@@ -108,13 +104,16 @@
   h1 {
     white-space: nowrap;
   }
+
   h2 {
     @include font($mainColor, 500, 26px);
   }
+
   p {
     @include font($mainColor, 400, 16px);
     line-height: 24px;
   }
+
   img {
     max-width: 100%;
     height: 100%;

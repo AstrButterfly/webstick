@@ -135,6 +135,13 @@ document.addEventListener("click", (event) => {
   });
 });
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1000) {
+    mob.classList.remove("active");
+    logo.style.display = "block";
+  }
+});
+
 const toggleDropdownVisibility = (isVisible) => {
   servicesDropdown.classList.toggle("visible", isVisible);
 };
@@ -161,11 +168,4 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollTop = Math.max(currentScroll, 0);
-});
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 1000) {
-    mob.classList.remove("active");
-    logo.style.display = "block";
-  }
 });

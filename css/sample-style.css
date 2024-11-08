@@ -31,7 +31,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -42,9 +41,6 @@
   width: 836px;
   position: relative;
   z-index: 30;
-}
-.popup__btn {
-  margin-top: 0 !important;
 }
 .popup__close {
   cursor: pointer;
@@ -165,9 +161,6 @@ body a {
   text-decoration: none;
   position: relative;
 }
-body p {
-  color: #f8f9fa;
-}
 
 .container {
   margin: 0 auto;
@@ -187,6 +180,25 @@ body p {
 }
 .header__mob {
   display: none;
+}
+.header-white {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #212428;
+  background-color: #f8f9fa;
+}
+.header-white .header__nav-href {
+  color: #212428;
+}
+.header-white img {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
+.header-white .burger-line,
+.header-white .burger::after,
+.header-white .burger::before {
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
 }
 .header.sticky {
   position: fixed;
@@ -682,7 +694,7 @@ body p {
 }
 .pre-footer__checkbox-group {
   position: relative;
-  margin-top: 22px;
+  margin-top: 24px;
   left: 10px;
   line-height: 24px;
 }
@@ -988,6 +1000,7 @@ body p {
 }
 
 .form-control {
+  height: 52px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -998,15 +1011,17 @@ body p {
   font-weight: 400;
   font-size: 24px;
 }
+.form-control-popup:focus {
+  background-color: #f8f9fa !important;
+}
 .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom: 1px solid #212428;
-  background-color: #f8f9fa;
-}
-
-.form-control:focus {
   background-color: #fff;
+}
+.form-control-lg {
+  height: 52px;
 }
 
 .form-floating label {
@@ -1248,11 +1263,6 @@ body p {
     font-size: 12px;
   }
 }
-@media (max-width: 416px) {
-  .pre-footer__form__btn {
-    margin-top: 68px;
-  }
-}
 @media (max-width: 516px) {
   .line {
     height: 83px;
@@ -1266,6 +1276,9 @@ body p {
   .pre-footer__wrapper {
     padding: 32px;
   }
+  .pre-footer__checkbox-group {
+    margin-top: 32px;
+  }
 }
 @media (min-width: 375px) {
   .container {
@@ -1277,23 +1290,6 @@ body p {
   }
   .pre-footer__contacts__emailBlock {
     font-size: 16px;
-  }
-  .footer__branding p {
-    text-align: center;
-  }
-  .footer__text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer__text-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -1352,6 +1348,23 @@ body p {
     width: 236px;
     height: 40px;
   }
+  .footer__branding p {
+    text-align: center;
+  }
+  .footer__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__text-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .popup__content {
     padding: 24px 20px;
   }
@@ -1374,9 +1387,20 @@ body p {
     padding: 0;
   }
 }
+@media (max-width: 394px) {
+  .pre-footer__form__btn {
+    margin-top: 5rem;
+  }
+  .pre-footer__checkbox-group label {
+    font-size: 14px;
+  }
+}
 @media ((min-width: 394px) and (max-width: 523px)) {
   .popup__btn {
     margin-top: 3rem !important;
+  }
+  .pre-footer__form__btn {
+    margin-top: 4rem;
   }
 }
 @media (max-width: 1000px) {
@@ -1407,7 +1431,7 @@ body p {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(33, 37, 41, 0.8);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -1419,6 +1443,9 @@ body p {
     -webkit-transition: all 0.1s;
     transition: all 0.1s;
   }
+  .header__nav p {
+    color: #f8f9fa;
+  }
   .header__mob {
     position: fixed;
     width: 100%;
@@ -1428,7 +1455,6 @@ body p {
     top: 0;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    color: #000000;
     padding-left: 10px;
     padding-right: 10px;
     -webkit-transition: all 0.4s;
@@ -1485,6 +1511,7 @@ body p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    color: #f8f9fa;
   }
   .header__mob img {
     -webkit-transform: rotate(-90deg);
@@ -1551,6 +1578,17 @@ body p {
   .header.menu-active .header__nav-item img {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+  .header-white .header__nav-href {
+    color: #f8f9fa;
+  }
+  .header-white .burger.open span, .header-white .burger.open::before, .header-white .burger.open::after {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+  }
+  .header.menu-active img {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
   }
   .services-dropdown {
     display: none;
@@ -1641,8 +1679,11 @@ body p {
   .popup__content {
     padding: 24px 30px;
   }
+  .popup__btn {
+    margin-top: 0 !important;
+  }
   .sticky .container {
-    padding: 0;
+    padding: 0 1rem;
   }
   .header {
     padding: 23px 1rem;
@@ -1681,29 +1722,6 @@ body p {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     padding-bottom: 4%;
-  }
-  .header-white {
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    color: #212428;
-    background-color: #f8f9fa;
-  }
-  .header-white .header__nav-href {
-    color: #212428;
-  }
-  .header-white img {
-    -webkit-filter: brightness(1) invert(1);
-            filter: brightness(1) invert(1);
-  }
-  .header-white .burger-line,
-  .header-white .burger::after,
-  .header-white .burger::before {
-    -webkit-filter: brightness(1) invert(1);
-            filter: brightness(1) invert(1);
-  }
-  .header-white .header__btn {
-    color: #f8f9fa;
-    background-color: #212428;
   }
   .pre-footer {
     margin: 0 17px;
@@ -1784,7 +1802,7 @@ body p {
 }
 @media (min-width: 1400px) {
   .container {
-    max-width: 1326px;
+    max-width: 1296px;
     padding: 0px 15px;
   }
   .pre-footer__title h1 {
