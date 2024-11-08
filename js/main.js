@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".tehnology__tab ul li");
   const imagesContainer = document.querySelector(".tehnology__images-set");
 
+  const popup = document.getElementById("popupForm");
+  const overlay = document.getElementById("overlay");
+  const body = document.querySelector("body");
+  const allForm = document.querySelector(".popup__content");
   const thanksMessage = document.getElementById("popupThanks");
   const backButton = document.getElementById("popupBack");
 
@@ -97,6 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "pre-footer_phone",
     "pre-footer_privacy",
     () => {
+      popup.style.display = "flex";
+      allForm.style.display = "none";
+      overlay.classList.add("active");
+      body.classList.add("noscroll");
       thanksMessage.style.display = "flex";
 
       const name = document.getElementById("name").value.trim();
@@ -105,11 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const company = document.getElementById("company").value.trim();
       const privacy = document.getElementById("pre-footer_privacy").checked;
 
-      console.log("Name: " + name);
-      console.log("Email: " + email);
-      console.log("Phone: " + phone);
-      console.log("Company: " + company);
-      console.log("Privacy Policy Accepted: " + privacy);
+      // console.log("Name: " + name);
+      // console.log("Email: " + email);
+      // console.log("Phone: " + phone);
+      // console.log("Company: " + company);
+      // console.log("Privacy Policy Accepted: " + privacy);
     }
   );
 

@@ -566,6 +566,9 @@ body p {
   border-radius: 24px;
   padding: 48px 32px;
 }
+.pre-footer__contacts p {
+  color: #969696;
+}
 .pre-footer__contacts-offices {
   margin-bottom: 32px;
 }
@@ -587,15 +590,14 @@ body p {
   gap: 4px;
   margin-bottom: 8px;
 }
+.pre-footer__contacts-country p {
+  color: #212428 !important;
+}
 .pre-footer__contacts-countryName {
   font-weight: 700;
-  color: #212428;
 }
 .pre-footer__contacts-blockText {
   line-height: 24px;
-}
-.pre-footer__contacts-blockText p {
-  color: #969696;
 }
 .pre-footer__contacts__emailBlock {
   font-size: 18px;
